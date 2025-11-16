@@ -1,0 +1,7 @@
+resultado = input("ingresar tu edad:")
+print(type(resultado))
+numero = int(resultado)
+str(22)
+float("22.12")
+bool("un string")
+bool(None)

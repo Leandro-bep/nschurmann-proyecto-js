@@ -1,0 +1,25 @@
+import openai
+
+openai.api_key = 'TU_API_KEY'
+
+def hablar_con_yui(mensaje_usuario):
+    prompt = f"Eres Yui, una IA dulce y empática. Responde de forma amable y apoyadora.\nUsuario: {mensaje_usuario}\nYui:"
+    
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": "Eres Yui, una IA dulce y empática."},
+            {"role": "user", "content": mensaje_usuario}
+        ],
+        temperature=0.7,
+        max_tokens=150
+    )
+    
+    return response.choices[0].message['content'].strip()
+
+while True:
+    mensaje = input("Tú: ")
+    if mensaje.lower() == "salir":
+        break
+    respuesta_yui = hablar_con_yui(mensaje)
+    print("Yui:", respuesta_yui)
