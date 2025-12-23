@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <style>
+            /* =========================
+            FONDO GENERAL
+            ========================= */
+            .fondo-oscuro {
+            background-color: #1e1e2f;
+            font-family: Arial, sans-serif;
+            }
+
+            /* =========================
+            LAYOUT PRINCIPAL
+            ========================= */
+            .pagina-historia {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            padding: 60px;
+            max-width: 1300px;
+            margin: 0 auto;
+            }
+
+            .historia-principal {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            }
+
+            /* =========================
+            TÍTULO Y TAGS
+            ========================= */
+            .titulo-historia {
+            font-size: 42px;
+            color: #d946ef;
+            margin-bottom: 10px;
+            }
+
+            .tag {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            }
+
+            .tag-historia {
+            background: #d946ef;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            }
+
+            /* =========================
+            CONTENIDO DE LA HISTORIA
+            ========================= */
+            .contenido-historia {
+            background-color: #2b2f42;
+            padding: 40px;
+            border-radius: 18px;
+            max-width: 720px;
+            line-height: 1.9;
+            color: #e5e7eb;
+            }
+
+            /* =========================
+            SIDEBAR
+            ========================= */
+            .historia-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            }
+
+            .sidebar-card {
+            background: #232338;
+            padding: 25px;
+            border-radius: 16px;
+            }
+
+            .titulo-sidebar {
+            color: #d946ef;
+            margin-bottom: 15px;
+            }
+
+            /* =========================
+            BOTONES
+            ========================= */
+            .botones {
+            display: flex;
+            gap: 15px;
+            }
+
+            .btn {
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            }
+
+            .rosa {
+            background-color: #d946ef;
+            color: white;
+            }
+
+            /* =========================
+            COMENTARIOS
+            ========================= */
+            .comentarios {
+            background: #232338;
+            padding: 30px;
+            border-radius: 16px;
+            color: #e5e7eb;
+            }
+
+            .comentarios h2 {
+            text-align: center;
+            color: #d946ef;
+            margin-bottom: 20px;
+            }
+
+            #comentarios-form input,
+            #comentarios-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            border: none;
+            background: #1e1e2f;
+            color: white;
+            font-size: 14px;
+            }
+
+            #comentarios-form textarea {
+            resize: none;
+            height: 90px;
+            }
+
+            #comentarios-form button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #d946ef, #6366f1);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            }
+
+            #comentarios-form button:hover {
+            opacity: 0.9;
+            }
+
+            .comentario {
+            background: #1e1e2f;
+            padding: 14px;
+            border-radius: 12px;
+            margin-top: 15px;
+            }
+
+            .comentario strong {
+            color: #a78bfa;
+            }
+
+            /* =========================
+            RESPONSIVE
+            ========================= */
+            @media (max-width: 900px) {
+            .pagina-historia {
+                grid-template-columns: 1fr;
+            }
+
+            .contenido-historia {
+                max-width: 100%;
+            }
+            }
+        </style>
+<body class="fondo-oscuro">
+    <section class="pagina-historia">
+        <!-- columna izquierda -->
+        <div class="historia-principal">
+            <h1 class="titulo-historia">Si Hubiera Pasado</h1>
+              <div class="tag">
+                    <span class="tag-historia">Reflectiva</span>
+                    <span class="tag-historia">Drama</span>
+                    <span class="tag-historia">Vida Cotidiana</span>
+                    <span class="tag-historia">Crecimiento personal</span>
+              </div>
+        
+        <!-- columna cuadro de la historia-->
+        <div class="contenido-historia">
+            <p>
+                Nunca pensé que mi vida se definiría por momentos tan pequeños. No por grandes logros ni por decisiones épicas, sino por instantes silenciosos, de esos que nadie más ve y que, aun así, terminan pesando más que cualquier aplauso.
+
+                Desde hace años aprendí a seguir adelante sin hacer ruido. A cumplir con lo esperado, a responder cuando me llamaban, a estar cuando hacía falta. Desde fuera parecía que todo iba bien, y tal vez era cierto. Pero por dentro, muchas veces sentí que estaba viviendo en automático, como si alguien más hubiera decidido el ritmo por mí.
+
+                Hubo días en los que quise detenerme y preguntarme si esto era suficiente. Si así se suponía que debía sentirse crecer. Pero siempre había algo que lo postergaba: responsabilidades, personas, miedo. Me convencí de que ya habría tiempo para mí después.
+
+                Ese “después” nunca llegó.
+
+                Con el paso del tiempo empecé a notar pequeños desgastes. El cansancio que no se iba durmiendo, la sonrisa que aparecía por costumbre, la sensación de estar cumpliendo una lista que no recordaba haber escrito. No era tristeza, era algo más silencioso. Una ausencia difícil de explicar.
+
+                Una noche común, sin nada especial, me quedé solo. No puse música, no busqué distracciones. Me senté y dejé que los pensamientos llegaran. Pensé en todo lo que callé, en las decisiones que tomé por inercia, en las veces que dije “está bien” cuando en realidad no lo estaba.
+
+                No lloré.
+                No hubo drama.
+
+                Solo una certeza incómoda: si seguía así, nadie iba a venir a rescatarme de esta versión de mí.
+
+                Al día siguiente, el mundo siguió igual. La gente, las rutinas, los problemas. Nada había cambiado… excepto yo. Empecé con cosas pequeñas. Decir no cuando era necesario. Escuchar mi cansancio. Elegirme sin sentir culpa por hacerlo.
+
+                No fue fácil. Cambiar duele, incluso cuando es para bien. Hubo dudas, retrocesos, momentos en los que quise volver a lo conocido. Pero cada vez que lo intentaba, recordaba esa noche y la promesa silenciosa que me hice.
+
+                Hoy no puedo decir que tenga todo claro. Sigo equivocándome, sigo aprendiendo. Pero ya no me ignoro. Ya no paso por mi propia vida como un espectador.
+
+                Y aunque nadie lo note, aunque no haya aplausos ni reconocimientos, por primera vez siento que estoy viviendo de verdad.
+            </p>
+
+        </div>
+        </div>
+
+        <aside class="historia-sidebar">
+          <div class="botones">
+            <a href="../index.html" class="btn rosa"><- Volver al inicio</a>
+          </div>
+            <div class="sidebar-card">
+                <h2 class="titulo-sidebar">Nos gustaria leerte:</h2>
+                    <div class="sidebar-card comentarios">
+                        <h2>Comentarios</h2>
+
+                        <form id="comentarios-form">
+                            <input type="text" placeholder="Tu nombre (opcional)">
+                            <textarea placeholder="Escribe tu comentario..."></textarea>
+                            <button>Enviar comentario</button>
+                        </form>
+
+                        <div class="comentario">
+                            <strong>Anónimo</strong>
+                            <p>Esta historia me hizo pensar mucho.</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="sidebar-card">
+            <h3>Historias recomendadas</h3>
+            <ul>
+                <li>Historia 1</li>
+                <li>Historia 2</li>
+                <li>Historia 3</li>
+            </ul>
+            </div>
+        </aside>
+    </section>
+</body>
+    </head>
+</html>

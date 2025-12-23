@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+/* =========================
+   RESET BÁSICO
+========================= */  
+        body {
+            background-color: #1e1e2f;
+            font-family: Arial, sans-serif;
+        }
+/* =========================
+   TEXTO GLOBAL
+========================= */
+        h1, h2, h3, h4, h5, h6 {
+            color: #a78bfa;
+        }
+
+        a {
+            color: #6366f1;
+        }
+        p {
+            font-size: 20px;
+            color: #6366f1;
+        }
+        hr {
+            border: 1px solid #d946ef;
+            margin: 40px 0;
+        }
+        h1 {
+            font-size: 50px;
+        }
+/* =========================
+        Tipo texto
+========================= */
+        .centrado{
+                text-align: center;
+        }
+        .texto-oculto {
+            display: none;
+        }
+        .hero-text {
+          max-width: 500px;
+        }
+        .hero-text h1 {
+          font-size: 48px;
+          margin-bottom: 10px;
+        } 
+        .hero-text h1 span {
+          color: #d946ef;
+        }
+        .bienvenida {
+          color: #cbd5f5;
+        }
+        .descripcion {
+          margin: 20px 0;
+          color: #b6b9d6;
+        }
+/* =========================
+        imagenes
+========================= */
+        .imagen{
+            width: 300px;
+            height: 300px;
+        }
+        .hero-img img {
+          width: 520px;
+          
+          border-radius: 20px;
+        }
+        
+/* =========================
+        comentarios
+========================= */
+              .comentarios {
+          max-width: 600px;
+          margin: 60px auto;
+          background: #232338;
+          padding: 30px;
+          border-radius: 16px;
+          box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+          color: #e5e7eb;
+        }
+
+        .comentarios h2 {
+          text-align: center;
+          color: #d946ef;
+          margin-bottom: 20px;
+        }
+
+        #comentarios-form input,
+        #comentarios-form textarea {
+          width: 100%;
+          padding: 12px;
+          margin-bottom: 12px;
+          border-radius: 10px;
+          border: none;
+          background: #1e1e2f;
+          color: white;
+          font-size: 14px;
+        }
+
+        #comentarios-form textarea {
+          resize: none;
+          height: 90px;
+        }
+
+        #comentarios-form button {
+          width: 100%;
+          padding: 12px;
+          background: linear-gradient(90deg, #d946ef, #6366f1);
+          border: none;
+          border-radius: 10px;
+          color: white;
+          font-size: 15px;
+          cursor: pointer;
+        }
+
+        #comentarios-form button:hover {
+          opacity: 0.9;
+        }
+
+        .comentario {
+          background: #1e1e2f;
+          padding: 14px;
+          border-radius: 12px;
+          margin-top: 15px;
+        }
+
+        .comentario strong {
+          color: #a78bfa;
+        }
+
+/* =========================
+        componentes
+========================= */
+        .letra-cancion {
+        background-color: #2b2f42;
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 500px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        text-align: center; 
+        line-height: 1.8;
+        }
+        .hero {
+        display: flex;
+        justify-content: space-between ;
+        align-items: center;
+        padding: 10px;
+        gap: 70px;
+        }
+        .hero.invertido {
+        flex-direction: row-reverse;
+        }
+        .linea-degradada {
+        border: none;
+        height: 2px; /*mas fina la linea*/
+        width: 80%;
+        margin: 15px auto;/*menos espacio de separacion*/
+        background: linear-gradient(
+          to right,
+          transparent,
+          #d946ef,
+          transparent
+          );
+        }
+        .cuadro-objetivo {
+          background: #232338; /* un tono más claro que el fondo */
+          border: 1px solid #2f2f4a;
+          border-radius: 14px;
+          padding: 26px;
+          max-width: 720px;
+          margin: 40px auto;
+          color: #e5e7eb;
+          line-height: 1.8;
+          text-align: center;
+        }
+        .contenedor-centro{
+          display: flex;
+          justify-content: center;
+        }
+        .wrapper {
+          display: flex;
+          justify-content: center;
+          padding-top: 30px; 
+        }
+        .card-bg {
+          max-width: 1200px;
+          width: 90%;
+          padding: 1px; /* grosor del borde */
+          border-radius: 28px;
+
+          background: linear-gradient(
+            125deg,
+            #c77dff,
+            #7b2cbf
+          );
+        }
+        .card-content {
+          background-color: #2b2f42;
+          border-radius: 25px;
+          padding: 40px;
+          color: #ffffff;
+        }
+          .final-section {
+            margin-top: 100px;
+          padding-bottom: 40px;
+          text-align: center;
+          color: #e9d5ff;
+        }
+
+        .linea-final {
+          width: 60%;
+          height: 2px;
+          margin: 0 auto 20px;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            #d946ef,
+            transparent
+          );
+        }
+
+        .final-section p {
+          font-size: 1.1rem;
+        }
+/* =========================
+        pequeñas card
+========================= */
+.historias {
+  padding: 40px;
+  color: #e5e7eb;
+}
+
+/* GRID */
+.historias-grid {
+  display: grid;
+
+  /* 🔥 CONTROLA CUÁN ANCHAS PUEDEN SER LAS CARDS */
+  grid-template-columns: repeat(3, 1fr);
+
+  justify-content: center; /* centra las cards */
+  gap: 24px;
+}
+
+/* CARD */
+.story-card {
+  width: 100%;
+
+  /* 🔥 ESTE ES EL ANCHO REAL DE LA CARD */
+  max-width: 220px;
+
+  background: #2b2f42;
+  border-radius: 22px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+}
+
+/* IMAGEN */
+.story-img {
+  position: relative;
+}
+
+.story-img img {
+  width: 100%;
+
+  /* 🔥 ALTURA DE LA IMAGEN (más alto = card más grande) */
+  height: 150px;
+
+  object-fit: cover;
+}
+
+/* TAG */
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  background: #d946ef;
+  color: white;
+  padding: 4px 12px;
+
+  /* 🔥 TAMAÑO DEL TAG */
+  font-size: 0.7rem;
+
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+/* CONTENIDO */
+.story-body {
+  /* 🔥 ESPACIO INTERNO */
+  padding: 16px;
+}
+
+.story-body h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.story-body p {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+.nota-historias {
+  margin-top: 25px;      /* separación del grid */
+  text-align: center;
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  opacity: 0.9;
+}
+
+/* =========================
+   HISTORIA DESTACADA
+========================= */
+
+.historias.destacada .historias-grid {
+  grid-template-columns: 1fr; /* solo una card */
+  justify-items: center;
+}
+
+.story-destacada {
+  max-width: 320px;   /* MÁS GRANDE */
+}
+
+.story-destacada .story-img img {
+  height: 220px;      /* imagen más alta */
+}
+
+.story-destacada .story-body h3 {
+  font-size: 1.3rem;
+}
+
+.story-destacada .story-body p {
+  font-size: 1rem;
+}
+
+
+/* =========================
+        botones
+========================= */
+        .boton-chico {
+        font-size: 5px;
+        padding: 3px 6px;
+        cursor: pointer;
+        }
+        .botones {
+          display: flex;
+          gap: 15px;
+        }
+
+        .btn {
+          border: none;
+          padding: 12px 20px;
+          border-radius: 10px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+
+        .azul {
+          background-color: #3b82f6;
+          color: white;
+        }
+
+        .rosa {
+          background-color: #d946ef;
+          color: white;
+        }
+
+/* =========================
+        fondos
+========================= */
+        .fondo-oscuro {
+          background-color: #1e1e2f;
+          color: white;
+          padding: 40px;
+          font-family: Arial, sans-serif;
+        }
+
+/* =========================
+        seciones id
+========================= */
+        html {
+          scroll-behavior: smooth;
+        } 
+        ul.centrado {
+            list-style: none;     /* quita los puntos */
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.centrado li {
+            margin: 10px 0;
+        }
+
+                
+
+
+    </style>
+
+    <meta charset="UTF-8">
+    <title>Para Ti</title>
+
+</head>
+<script>
+  function mostrarTexto() {
+    const texto = document.getElementById("mensaje");
+
+    if (texto.style.display === "none") {
+      texto.style.display = "block";
+    } else {
+      texto.style.display = "none";
+    }
+  }
+</script>
+<script>
+const form = document.getElementById("comentarios-form");
+const lista = document.getElementById("lista-comentarios");
+
+let comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+
+function mostrarComentarios() {
+  lista.innerHTML = "";
+  comentarios.forEach(c => {
+    const div = document.createElement("div");
+    div.className = "comentario";
+    div.innerHTML = `<strong>${c.nombre}</strong><p>${c.mensaje}</p>`;
+    lista.appendChild(div);
+  });
+}
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const nombre = document.getElementById("nombre").value;
+  const mensaje = document.getElementById("mensaje").value;
+
+  comentarios.push({ nombre, mensaje });
+  localStorage.setItem("comentarios", JSON.stringify(comentarios));
+
+  form.reset();
+  mostrarComentarios();
+});
+
+mostrarComentarios();
+</script>
+
+<body class="fondo-oscuro">
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>¡Bienvenidos a <span>pequeñas historias</span>!</h1>
+      <p class="descripcion">
+        En este apartado encontraras pequeñas historias, reflexiones y pensamientos que he recopilado a lo largo del tiempo.
+        No dudes en volver cuando quieras, siempre serás bienvenido aquí.
+      </p>
+
+      <div class="botones">
+        <a href="Historias/index.html" class="btn azul">📚 Explorar historias</a>
+        <a href="#pensamientos" class="btn rosa">🖋️ Compartir tus pensamientos</a>
+      </div>
+      <p class="descripcion">Abajo tenemos las historias de la semana.<br>
+      Si gustar ver todo el catalogo que tenemos dale click a explorar historias</p>
+    </div>
+
+    <div class="hero-img">
+      <img src="https://i.pinimg.com/736x/a1/5c/3b/a15c3b36ef4423118cea2797951dd7e5.jpg" alt="Imagen de historias">
+    </div>
+  </section>
+
+<hr class="linea-degradada">
+
+<h1 class="centrado">¿Cual es el objetivo de esta pagina?</h1>
+  <div class="centrado">
+    <div class="cuadro-objetivo">
+    <p>Este espacio fue creado para contar historias nacidas de la imaginación y de la reinvención de experiencias reales que he 
+      vivido o escuchado. A través de la narración anónima, busco compartir emociones, pensamientos y momentos que 
+      conecten con quienes leen, utilizando nombres ficticios para proteger la identidad de las personas involucradas.
+    </p>
+    </div>
+  </div>
+<br>
+<br>
+<br>
+<hr class="linea-degradada">
+
+<section id="historias" class="seccion">
+  <section class="hero">
+    <div class="hero-text">
+
+      <section class="historias">
+        <h1><span style="color: #d946ef;">Historias de la semana</span></h1>
+
+        <div class="historias-grid">
+
+          <a href="Historias_semanal/index.html" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg" alt="">
+              <span class="tag">hola</span>
+            </div>
+            <div class="story-body">
+              <h3>Nueva</h3>
+              <p>Nueva historia</p>
+            </div>
+          </a>
+
+          <a href="Historias_semanal/index.html" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg" alt="">
+              <span class="tag">hola</span>
+            </div>
+            <div class="story-body">
+              <h3>Nueva</h3>
+              <p>Nueva historia</p>
+            </div>
+          </a>
+
+          <!-- 🔥 TERCERA CARD CORREGIDA -->
+          <a href="Historias_semanal/index.html" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg" alt="">
+              <span class="tag">hola</span>
+            </div>
+            <div class="story-body">
+              <h3>Nueva</h3>
+              <p>Nueva historia</p>
+            </div>
+          </a>
+
+        </div>
+        <p class="nota-historias">
+          Recuerda que cada semana se renueva la lista con sus votos.
+        </p>
+      </section>
+  </div>
+    <div class="hero">
+      <div class="hero-text">
+        <section class="historias destacada">
+          <h1><span style="color: #d946ef;">Historia destacada del día</span></h1>
+            <div class="historias-grid">
+                <a href="historia_destacada/index.html" class="story-card story-destacada">
+                  <div class="story-img">
+                    <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg" alt="">
+                    <span class="tag">hola</span>
+                  </div>
+                  <div class="story-body">
+                    <h3>romance</h3>
+                    <p>Nuevas historias</p>
+                  </div>  
+                </a>
+            </div>
+            <p class="nota-historias">
+              Esta es la historia destacada del dia de hoy.
+            </p>
+      </div>
+    </div>
+  </section>
+</section>
+             
+  
+ 
+      
+<hr class="linea-degradada">
+
+<h1 class="centrado">Frase del dia</h1>
+  <div class="wrapper">
+    <div class="card-bg">
+      <div class="card-content">
+        <h2>"La vida es un 10% lo que me ocurre y un 90% cómo reacciono a ello."<br> - Charles R. Swindoll</h2>
+      </div>
+    </div>
+  </div>
+<br>
+<br>
+<br>
+    <hr class="linea-degradada">
+
+<h1 class="centrado">Me ayudarias mucho dejando tu opinion sobre la pagina:</h1>
+  <div class="wrapper">
+    <div class="card-bg">
+      <div class="card-content">
+        <section id="pensamientos" class="seccion"></section>
+        <h3>Cual opinion o recomendacion tuya me ayuda a mejorar la pagina wed</h3>
+        <section class="comentarios">
+          <h2>💬 Comentarios</h2>
+
+          <form id="comentarios-form">
+            <input type="text" id="nombre" placeholder="Tu apodo" required>
+            <textarea id="mensaje" placeholder="Escribe tu comentario..." required></textarea>
+            <button type="submit">Enviar comentario</button>
+          </form>
+
+          <div id="lista-comentarios"></div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+  
+    
+
+
+
+
+<br>
+<br>
+
+<div class="final-section">
+  <div class="linea-final"></div>
+  <p>Gracias por visitar la pagina ✨ Nos vemos en una proxima ocacion.</p>
+</div>
+
+
+
+
+
+</body>
+</html> 

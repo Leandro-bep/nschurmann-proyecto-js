@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+/* CONTENEDOR GENERAL */
+.historias {
+  padding: 40px;
+  color: #e5e7eb;
+}
+
+/* GRID */
+.historias-grid {
+  display: grid;
+
+  /* 🔥 CONTROLA CUÁN ANCHAS PUEDEN SER LAS CARDS */
+  grid-template-columns: repeat(auto-fit, minmax(260px, max-content));
+
+  justify-content: center; /* centra las cards */
+  gap: 24px;
+}
+
+/* CARD */
+.story-card {
+  width: 100%;
+
+  /* 🔥 ESTE ES EL ANCHO REAL DE LA CARD */
+  max-width: 220px;
+
+  background: #2b2f42;
+  border-radius: 22px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+}
+
+/* IMAGEN */
+.story-img {
+  position: relative;
+}
+
+.story-img img {
+  width: 100%;
+
+  /* 🔥 ALTURA DE LA IMAGEN (más alto = card más grande) */
+  height: 150px;
+
+  object-fit: cover;
+}
+
+/* TAG */
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  background: #d946ef;
+  color: white;
+  padding: 4px 12px;
+
+  /* 🔥 TAMAÑO DEL TAG */
+  font-size: 0.7rem;
+
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+/* CONTENIDO */
+.story-body {
+  /* 🔥 ESPACIO INTERNO */
+  padding: 16px;
+}
+
+.story-body h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.story-body p {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edición</title>
+<body>
+  <section class="historias">
+  <h2>Historias de la semana</h2>
+
+  <div class="historias-grid">
+
+    <a href="historia1.html" class="story-card">
+      <div class="story-img">
+        <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg" alt="">
+        <span class="tag">SAYORI</span>
+      </div>
+      <div class="story-body">
+        <h3>Sparkling Eyes</h3>
+        <p>Los inicios de Sayori y sus primeros momentos...</p>
+      </div>
+    </a>
+
+    <a href="historia2.html" class="story-card">
+      <div class="story-img">
+        <img src="https://i.pinimg.com/736x/63/33/aa/6333aa6bbd27d0b1b3dc6d3d6b54d99c.jpg" alt="">
+        <span class="tag">MC</span>
+      </div>
+      <div class="story-body">
+        <h3>Forlorn Heart</h3>
+        <p>Una historia alternativa donde MC enfrenta su decisión...</p>
+      </div>
+    </a>
+  
+
+  </div>
+</section>
+
+

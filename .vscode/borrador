@@ -1,0 +1,238 @@
+
+    <a href="../index.html">Volver al inicio</a>
+
+    <h1>Historias</h1>
+
+</body>
+    <div class="centrado">
+  <h1 style="font-size: 50px;">¡SIMPLEMENTE PROVANDO!</h1>
+    </div>
+    <div class="centrado">
+        <a href="https://i.pinimg.com/736x/09/52/31/095231c465fafda98a211aa107f40e98.jpg" target="_blank">Haz clic para algo especial</a>
+    </div>
+        <div class="centrado">
+            <h2>¡queria probar mi comocimiento haciendo esto, espero que te guste!</h2>
+            <h3>(dame tu opinion si quieres😁)</h3>
+            <h6>P.D: todavia no esta habilitado para opiniones xd😅, dentro de la pagina.</h6>
+        </div>
+    <br>
+<form id="formulario">
+
+  <label>Comentario</label> 
+  <textarea id="comentario" required></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
+<h6>todavia no funciona los comentarios😅</h6>
+
+<hr>
+
+<div class="centrado">
+    <h2>Hola, espero que te haiga gustado el link de arriba es un panorama unico creo, xd</h2>
+</div>
+    <p>dejando eso del link de lado mira estas imgenes</p>
+    <img src="https://i.pinimg.com/736x/9a/c7/c9/9ac7c92951283a4bfb44614e8f8d719e.jpg" class="imagen" alt="imagen  2">
+    <img src="https://i.pinimg.com/1200x/c4/87/ff/c487ffa6dfa74ac669d4e730871d2d83.jpg" class="imagen" alt="imagen 3">
+    <img src="https://i.pinimg.com/736x/f1/d1/f4/f1d1f4840e9ad1bb5dde760e7c14303e.jpg" class="imagen" alt="imagen  4">
+    <img src="https://i.pinimg.com/736x/9b/92/30/9b92307dd79e6578fed91b4d8675c6d7.jpg" class="imagen" alt="imagen  5">
+    <br>
+<h2>Y si te preguntas, si, no sabia que imagenes poner. Solo busque cosas random y aparecieron esas XD.</h2>
+
+    <br>
+    <h1>Mira este cuadro</h1>
+        <table border="1">
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+    <p>Esta chiquito si pero es un cuadro. Todavia estoy aprendiendo eso del cuadro y tablas (es un poco complicado)</p>
+    <br>   
+
+    <p>mira este pequeño panel de inicio de secion</p> 
+    <div class="form-container">
+      <p class="title">Welcome back</p>
+      <form class="form">
+        <input type="email" class="input" placeholder="Email">
+        <input type="password" class="input" placeholder="Password">
+        <p class="page-link">
+          <span class="page-link-label">Forgot Password?</span>
+        </p>
+        <button class="form-btn">Log in</button>
+      </form>
+      <p class="sign-up-label">
+        Don't have an account?<span class="sign-up-link">Sign up</span>
+      </p>
+      <div class="buttons-container">
+        <div class="apple-login-button">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" class="apple-icon" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M747.4 535.7c-.4-68.2 30.5-119.6 92.9-157.5-34.9-50-87.7-77.5-157.3-82.8-65.9-5.2-138 38.4-164.4 38.4-27.9 0-91.7-36.6-141.9-36.6C273.1 298.8 163 379.8 163 544.6c0 48.7 8.9 99 26.7 150.8 23.8 68.2 109.6 235.3 199.1 232.6 46.8-1.1 79.9-33.2 140.8-33.2 59.1 0 89.7 33.2 141.9 33.2 90.3-1.3 167.9-153.2 190.5-221.6-121.1-57.1-114.6-167.2-114.6-170.7zm-105.1-305c50.7-60.2 46.1-115 44.6-134.7-44.8 2.6-96.6 30.5-126.1 64.8-32.5 36.8-51.6 82.3-47.5 133.6 48.4 3.7 92.6-21.2 129-63.7z"></path>
+          </svg>
+          <span>Log in with Apple</span>
+        </div>
+        <div class="google-login-button">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" x="0px" y="0px" class="google-icon" viewBox="0 0 48 48" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12
+	c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24
+	c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657
+	C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36
+	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
+	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+          </svg>
+          <span>Log in with Google</span>
+        </div>
+      </div>
+    </div>
+        <p>puedes creer que solo ese cuadro es tremenda linea de codigo (mira la imagen)</p>
+
+<div class="centrado">
+  <img src="Imagenes/foto.jpg" style="width:600px; height:400px;" alt="codigo del cuadro">
+  <p>por algun error no sale la imagen xd, bueno la cosa es que es grande el codigo, sin contar que lo saque de internet</p>
+</div>
+
+    <hr> 
+
+<button onclick="mostrarTexto()" class="boton-chico"></button>
+
+<h5 id="mensaje" class="centrado" style="display: none;">
+  Continuando y como decía ahí el título, esto poniendo en conocimiento lo que he aprendido en unos días.
+  Y bueno quería aprovechar esto para decirte algunas cosas que he estado pensando últimamente,
+  aunque si no quieres no pasa nada.
+</h5>
+
+<p class="centrado">Mira esta es una pequeña parte en letra de mi  musica favorita</p>
+<div class="contenedor-centro">
+    <div class="letra-cancion">
+            <p>
+                Amé tu forma de reír<br>
+                Cuando yo te conocí<br>
+                Y tu manera de llorar<br>
+                Cuando algo iba mal
+            </p>
+            <p>
+                También amé tu sonreír<br>
+                Cuando eras muy feliz<br>
+                Y tu manera de ocultar<br>
+                Las ganas hoy de llorar
+            </p>
+            <p>
+                Sé que nada ya diré<br>
+                Es muy fácil de entender<br>
+                Mi manera de pensar<br>
+                No me deja razonar  
+            </p>
+            <p>
+                Si pudiera algo hacer<br>
+                Haría algo por tu bien<br>
+                Sólo te deseo abrazar<br>
+                Jamás te podré olvidar
+            </p>
+            <img 
+            src="https://i.pinimg.com/originals/89/2a/b7/892ab776279414977933b566575cf62d.gif" 
+            class="imagen">
+    </div>
+</div>
+
+    <p>Si tienes alguna duda sobre la letra, simplemente lo entenderas si reflexionas cada verso de la cancion, ya que no es simplemente una
+        una cancion de amor comun y corriente, tiene un significado mas profundo que solo el amor, a la vez que no solo habla de amor,
+        sino que tambien de preocupacion y cuidado por alguien especial.
+        Simplemente reflexiona en cada verso y veras que tiene sentido lo que digo.
+    </p>
+
+
+  
+<hr>
+<div class="centrado">
+    <h2>Ahora pasamos a los juegos, juego un chingo pero hay algunos que siempre te marcan</h2>
+</div>
+
+<p>En mi caso tengo un monton de juegos que me marcaron en mi desarrollo, tanto estrategica, solucion, ritmo, patrones,etc.</p>
+    <h3>Algunos de esos juegos son:</h3>
+    <ul>
+        <li>Plants vs zombies</li>
+        <li>My talking tom</li>
+        <li>Counter strike</li>
+        <li>Left 4 dead</li>
+        <li>Five night at freddy's</li>
+        <li>Touhou project</li>
+        <li>Osu!</li>
+    </ul>
+
+        <img src="https://i.pinimg.com/1200x/25/94/37/25943755163eb990c68ac5cdf860f7c2.jpg" width="250" height="250"
+        alt="Plants vs Zombies">
+        <img src="https://i.pinimg.com/1200x/b1/ac/ca/b1acca0ae130a29fe311bb03786ccbc6.jpg" width="250" height="250"
+        alt="My talking tom">
+        <img src="https://i.pinimg.com/736x/5b/6c/7e/5b6c7e21f5b3bdaec23fda9a69a3c79f.jpg" class="imagen"
+        alt="l4d">
+        <img src="https://i.pinimg.com/1200x/c7/8b/9e/c78b9e0f128b18fde5b153dc63d5ce8f.jpg" class="imagen"
+        alt="touhou">
+        <img src="https://i.pinimg.com/736x/e1/d8/28/e1d828efaf2f06b6c1b63a0710e98440.jpg" class="imagen"
+        alt="osu!">
+    <br>
+
+<p>Y un monton mas pero estos son los mas memorables.</p>
+
+<hr class="linea-degradada">
+
+
+<div class="texto-oculto"">
+    <div class="centrado">
+    <h4>La verdad no se que ha pasado los ultimos dias, he sentido que algo no esta bien y me tiene preocupado, y no se, es cuando te pasa algo y sientes que hiciste algo malo
+        pero no sabes que es, o simplemente no tienes idea de que es lo que pasa.   
+    </h4>
+
+        <h4>Pero igual dejando eso de lado solo queria decir como esta esta?, estas bien, se que suena repetitivo pero es la unica forma de pensar y saber que estas bien y tranquila,
+            se que es mejor decirtelo en persona, pero no tenia las palabras para decirtelo. Digamos que es complicado no se porque.</h4>
+    
+   
+    
+        <h4>Bueno no quiero aburrirte mas con esto, solo queria que supieras como me siento y que estoy aqui si necesitas algo,
+            no dudes en llamarme o mandarme un mensaje si necesitas hablar o solo pasar tiempo,
+            "esto debi decirtelo hace tiempo", pero puedes llamarme en cualquier momento si lo necesitas.
+            Y si en algun momento no te contesto, no es porque no quiera, es que aveces no siento el tono de llamada o el mensaje,
+            pero siempre que pueda te respondere a la brevedad.</h4>
+        <br>
+        <h5>Y nada solo eso, se que has pasado por algo que te desanimo mucho y aunque habia esperanza no paso,
+            pero no dejes que eso te afecte, recuerda gracias a eso nos volvemos mas fuertes asi que no hay que temer.
+            Tal vez pienses que decepcionaste a alguien, pero la verdad es que no es asi.
+            Duele al principio es verdad, yo tambien lo vivi en su momento,
+        pero con el tiempo aprendes que no es el fin del mundo.</h5>
+    </div>
+
+    <br>
+
+    <div class="centrado">
+        <h4>Cualquier cosa que quieras contar, ya sea mala o buena, siempre estare ahi para escucharte, y quiero que recuedes esto.</h4>
+            <b>Siempre estare ahi para ti, porque ahora eres alguien a quien debo cuidar y proteger.</b>
+                <h4>Y asi sera hasta que tu me digas que; me valla, que no me necesitas, que te aburriste de mi, o simplemente quieras que me aleje de ti.</h4>
+    </div>
+        <br>
+    <div class="centrado">
+        <h4>Pero hasta entonces, Mientras que yo exista siempre tendras un amigo que nunca te dejara sola, estara orgulloso de ti por cada cosita que logres.</h4>
+    </div>
+
+    <br>
+    <div class="centrado">
+        <h2>No quiero ver esa carita alegre tuya, con ojos apagados y llorosos</h2>
+    </div>
+    <br>
+    <div class="centrado">
+        <h4>P.D: Quiero seguir viendo esa sonrisa tuya siempre😊</h4>
+    </div>
+</div>
+
+<a href="Historias/">Ir a Historias</a>

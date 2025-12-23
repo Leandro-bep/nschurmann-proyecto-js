@@ -1,0 +1,122 @@
+<!-- nivel 1: estructura basica de html-->
+<!DOCTYPE html>
+<html> <!--tanto la linea de html, head, y body, siemore deben acabar con si mismo-->
+<head>
+    <meta charset="UTF-8"> <!--esta linea es para que reconozca los acentos y caracteres especiales-->
+    
+    <title> Descripcion de HTML </title>  <!--title es el titulo que aparece en la pestaña del navegador -->
+<head>
+<body>
+    <h1>Hello world</h1>
+</body>
+</html>
+<!-- esto es lo mas importante que debe ir en cuarquier html, aqui tambien se puede cambiar el desiño de la pagina, etc.-->
+
+<!-- nivel 2: Etiquetas esenciales -->  
+<h1>Título grande</h1>
+<h2>Subtítulo</h2>          <!--Las h son para poder poner titulos a parte del titulo general y tiene tres tamaños-->
+<h3>Más pequeño</h3>
+
+<!--parrafos-->
+<p>Este es un parrafo</p>  <!--los parrafos siempre van entre las etiquetas <p> y </p>-->
+
+<!--imagenes-->
+<img src="URL_de_la_imagen" alt="Descripcion de la imagen"> <!--la etiqueta img es para insertar imagenes, el atributo src es para poner 
+                                                            la URL de la imagen, y alt es para poner una descripcion de la imagen en caso
+                                                            de que no cargue-->  3
+<!--Enlaces-->
+<a href="URL_del_enlace">Texto del enlace</a> <!--la etiqueta a es para insertar enlaces, el atributo href es para poner la URL del enlace,
+                                                y el texto del enlace es el texto que aparecera en la pagina-->               
+                                                
+<!--Linea divisora-->
+<hr>  <!--la etiqueta hr es para insertar una linea divisora horizontal. Literal es una linea horizontal-->        
+
+<!--Espacios y saltos-->
+<br>  <!--la etiqueta br es para insertar un salto de linea o espacio en blanco-->
+
+<!--Nivel 3: Formatos de textos-->
+<b>Negrita</b>
+<i>Cursiva</i>
+<u>Subrayado</u>
+<mark>Marcado</mark>            <!--Su nombre lo dice, son formatos de textos-->
+<small>Texto pequeño</small>
+<strong>Importante</strong>
+<em>Énfasis</em>
+
+<!--Nivel 4: Listas-->
+<!--Listas ordenadas-->
+<ol>
+    <li>Encender la computadora</li>
+    <li>Abrir el navegador</li>     <!--las listas ordenadas van entre las etiquetas <ol> y </ol>, y cada elemento de la lista 
+                                        va entre las etiquetas <li> y </li>-->
+    <li>Entrar a Google</li>
+</ol>
+
+<!--Listas desordenadas-->
+<ul>
+    <li>Manzanas</li>
+    <li>Leche</li>              <!--Lo mismo pero en cualquier orden-->
+    <li>Pan</li>
+</ul>
+
+<!--Nivel 5: Tablas-->
+<table border="1">  <!--la etiqueta table es para insertar tablas, el atributo border es para poner un borde a la tabla-->
+    <tr>  <!--la etiqueta tr es para insertar una fila en la tabla-->
+        <th>Nombre</th>  <!--la etiqueta th es para insertar una celda de encabezado en la tabla-->
+        <th>Edad</th>
+    </tr>
+    <tr>
+        <td>Alice</td>  <!--la etiqueta td es para insertar una celda de datos en la tabla-->
+        <td>30</td>
+    </tr>
+    <tr>
+        <td>Bob</td>
+        <td>25</td>
+    </tr>
+
+<!--Nivel 6. div y contenedores(span)-->
+
+<div style="background-color: lightblue; padding: 20px;"> <!--la etiqueta div es un contenedor que se utiliza para agrupar elementos y aplicar estilos-->
+    <h2>Título dentro de un div</h2>                         <!--aqui se le aplica un color de fondo y un padding al div-->
+    <p>Este es un párrafo dentro del div.</p>               <!--el padding es el espacio entre el contenido y el borde del div-->
+</div>
+
+<div style="background: pink; padding: 10px;">
+    <p>Mi nombre es <span style="color: blue;">Aiko</span> y me gusta el HTML.</p>      <!--la etiqueta span es un contenedor en linea que se utiliza para aplicar estilos a una parte del texto-->
+</div>
+
+<!--nivel 7: Video y audio-->
+
+<video src="video.mp4" controls width="400"></video> <!--la etiqueta video es para insertar videos, el atributo src es para poner la URL del video,
+                                                el atributo controls es para mostrar los controles de reproduccion, y el atributo width es para poner el ancho del video-->
+
+<audio src="audio.mp3" controls></audio> <!--la etiqueta audio es para insertar audios, el atributo src es para poner la URL del audio,
+                                                y el atributo controls es para mostrar los controles de reproduccion-->
+
+<!--nivel 8: css en html. (diseño)--> 
+<style>
+    body {
+        background-color: lightblue;
+        font-family: Arial;             /*el body es para aplicar estilos a toda la pagina, en este caso se le aplica un color de fondo y una fuente*/  
+    }
+
+    h1 {
+        color: red;
+    }
+</style>
+
+<!--nivel 9: Etiquetas avanzadas-->
+<!--detalles desplegables-->
+<details>
+    <summary>Ver más</summary> <!--la etiqueta details es para crear un contenedor desplegable, y la etiqueta summary es para poner el titulo del contenedor--> 
+    <p>Contenido oculto.</p>
+</details>
+
+<!--Barra de progreso-->
+<progress value="50" max="100"></progress>          <!--la etiqueta progress es para mostrar una barra de progreso, el atributo value es para poner el valor actual,
+                                                    y el atributo max es para poner el valor maximo-->
+
+<!--Iframe-->
+<iframe src="https://example.com" width="600" height="400"></iframe>
+<!--la etiqueta iframe es para insertar una pagina web dentro de otra, el atributo src es para poner la URL de la pagina,
+el atributo width es para poner el ancho del iframe, y el atributo height es para poner la altura del iframe-->
