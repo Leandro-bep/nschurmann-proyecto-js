@@ -1,0 +1,174 @@
+    /* =========================
+            FONDO GENERAL
+            ========================= */
+            .fondo-oscuro {
+            background-color: #1e1e2f;
+            font-family: Arial, sans-serif;
+            }
+
+            /* =========================
+            LAYOUT PRINCIPAL
+            ========================= */
+            .pagina-historia {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            padding: 60px;
+            max-width: 1300px;
+            margin: 0 auto;
+            }
+
+            .historia-principal {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            }
+
+            /* =========================
+            TÍTULO Y TAGS
+            ========================= */
+            .titulo-historia {
+            font-size: 42px;
+            color: #d946ef;
+            margin-bottom: 10px;
+            }
+
+            .tag {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            }
+
+            .tag-historia {
+            background: #d946ef;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            }
+
+            /* =========================
+            CONTENIDO DE LA HISTORIA
+            ========================= */
+            .contenido-historia {
+            background-color: #2b2f42;
+            padding: 40px;
+            border-radius: 18px;
+            max-width: 720px;
+            line-height: 1.9;
+            color: #e5e7eb;
+            }
+
+            /* =========================
+            SIDEBAR
+            ========================= */
+            .historia-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            }
+
+            .sidebar-card {
+            background: #232338;
+            padding: 25px;
+            border-radius: 16px;
+            }
+
+            .titulo-sidebar {
+            color: #d946ef;
+            margin-bottom: 15px;
+            }
+
+            /* =========================
+            BOTONES
+            ========================= */
+            .botones {
+            display: flex;
+            gap: 15px;
+            }
+
+            .btn {
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            }
+
+            .rosa {
+            background-color: #d946ef;
+            color: white;
+            }
+
+            /* =========================
+            COMENTARIOS
+            ========================= */
+            .comentarios {
+            background: #232338;
+            padding: 30px;
+            border-radius: 16px;
+            color: #e5e7eb;
+            }
+
+            .comentarios h2 {
+            text-align: center;
+            color: #d946ef;
+            margin-bottom: 20px;
+            }
+
+            #comentarios-form input,
+            #comentarios-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            border: none;
+            background: #1e1e2f;
+            color: white;
+            font-size: 14px;
+            }
+
+            #comentarios-form textarea {
+            resize: none;
+            height: 90px;
+            }
+
+            #comentarios-form button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #d946ef, #6366f1);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            }
+
+            #comentarios-form button:hover {
+            opacity: 0.9;
+            }
+
+            .comentario {
+            background: #1e1e2f;
+            padding: 14px;
+            border-radius: 12px;
+            margin-top: 15px;
+            }
+
+            .comentario strong {
+            color: #a78bfa;
+            }
+
+            /* =========================
+            RESPONSIVE
+            ========================= */
+            @media (max-width: 900px) {
+            .pagina-historia {
+                grid-template-columns: 1fr;
+            }
+
+            .contenido-historia {
+                max-width: 100%;
+            }
+            }

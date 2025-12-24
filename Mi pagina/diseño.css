@@ -1,0 +1,779 @@
+/* =========================
+            RESET GENERAL
+            ========================= */
+
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }           
+
+            /* =========================
+            BASE DEL SITIO
+            ========================= */
+
+            body {
+            font-family: "Inter", system-ui, sans-serif;
+            background-color: #1e1e2f;
+            color: #e6e6f0;
+            line-height: 1.6;
+            }
+
+            /* =========================
+            CONTENEDOR GENERAL
+            ========================= */
+
+            .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 4rem 2rem;
+            }
+
+            /* =========================
+            SECCIÓN BIENVENIDA
+            ========================= */
+
+            .bienvenida {
+            max-width: 800px;
+            }
+
+            /* TÍTULO */
+
+            .bienvenida h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            }
+
+            .bienvenida h1 span {
+            background: linear-gradient(90deg, #a78bfa, #e879f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            }
+
+            /* TEXTO PRINCIPAL */
+
+            .bienvenida p {
+            font-size: 1.15rem;
+            color: #cfcfe6;
+            margin-bottom: 2.5rem;
+            }
+            /* =========================
+            HERO (BIENVENIDA + IMAGEN)
+            ========================= */
+
+            .hero {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            }
+
+            /* CONTENEDOR DE LA IMAGEN */
+
+            .hero-imagen {
+            position: relative;
+            background: linear-gradient(135deg, #2c2e4a, #1e1e2f);
+            border-radius: 20px;
+            padding: 1.2rem;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+            }
+
+            /* IMAGEN */
+
+            .hero-imagen img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            display: block;
+            object-fit: cover;
+            }
+
+            /* =========================
+            RESPONSIVE HERO
+            ========================= */
+
+            @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-imagen {
+                margin-top: 2rem;
+            }
+            }
+
+            /* =========================
+            BOTONES BIENVENIDA
+            ========================= */
+
+            .bienvenida-botones {
+            display: flex;
+            gap: 1.2rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            }
+
+            .bienvenida-botones a {
+            text-decoration: none;
+            padding: 0.9rem 1.6rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            /* BOTÓN EXPLORAR */
+
+            .btn-explorar {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.35);
+            }
+
+            .btn-explorar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.45);
+            }
+
+            /* BOTÓN COMPARTIR */
+
+            .btn-compartir {
+            background: linear-gradient(135deg, #c084fc, #e879f9);
+            color: #1e1e2f;
+            box-shadow: 0 10px 25px rgba(232, 121, 249, 0.35);
+            }
+
+            .btn-compartir:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(232, 121, 249, 0.45);
+            }
+
+            /* TEXTO INFERIOR */
+
+            .bienvenida-info {
+            font-size: 1.05rem;
+            color: #bdbdd8;
+            margin-top: 1rem;
+            }
+
+            /* =========================
+            LÍNEA DECORATIVA
+            ========================= */
+
+            .linea-decorativa {
+            height: 3px;
+            width: 80%;
+            margin: 4rem auto;
+            background: linear-gradient(
+                to right,
+                transparent,
+                #a78bfa,
+                transparent
+            );
+            border-radius: 2px;
+            }
+            /* =========================
+            ¿POR QUÉ SE CREÓ LA PÁGINA?
+            ========================= */
+
+            .porque-pagina {
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            padding: 3rem 2.5rem;
+            background: linear-gradient(
+                145deg,
+                #2c2e4a,
+                #242646
+            );
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+            }
+
+            .porque-pagina h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #c9c7ff;
+            }
+
+            .porque-pagina p {
+            font-size: 1.1rem;
+            color: #d1d1eb;
+            line-height: 1.7;
+            max-width: 750px;
+            margin: auto;
+            }
+
+            /* =========================
+            RESPONSIVE
+            ========================= */
+
+            @media (max-width: 768px) {
+            .porque-pagina {
+                padding: 2.2rem 1.8rem;
+            }
+
+            .porque-pagina h2 {
+                font-size: 1.6rem;
+            }
+            }
+
+            /* =========================
+            HISTORIA SEMANAL
+            ========================= */
+
+            .historia-semanal {
+            background-color: #262844;
+            padding: 3rem 2rem;
+            }
+
+            .historia-semanal h2 {
+            font-size: 1.9rem;
+            margin-bottom: 1.5rem;
+            color: #c9c7ff;
+            }
+            .historias {
+            padding: 40px;
+            color: #e5e7eb;
+            }
+
+            /* GRID */
+            .historias-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            justify-content: center;
+            gap: 24px;
+            }
+
+            /* CARD */
+            .story-card {
+            width: 100%;
+            max-width: 220px;
+            background: #2b2f42;
+            border-radius: 22px;
+            text-decoration: none;
+            color: inherit;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+
+            .story-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+            }
+
+            /* IMAGEN */
+            .story-img {
+            position: relative;
+            }
+
+            .story-img img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            }
+
+            /* TAG */
+            .tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #d946ef;
+            color: white;
+            padding: 4px 12px;
+            font-size: 0.7rem;
+            border-radius: 999px;
+            font-weight: bold;
+            }
+
+            /* CONTENIDO */
+            .story-body {
+            padding: 16px;
+            }
+
+            .story-body h3 {
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            color: #a78bfa;
+            }
+
+            .story-body p {
+            font-size: 0.85rem;
+            color: #cbd5f5;
+            }
+
+            /* =========================
+            HISTORIA DESTACADA
+            ========================= */
+
+            .historia-destacada {
+            background-color: #1a1b2e;
+            padding: 4rem 2rem;
+            position: relative;
+            }
+
+            .historia-destacada h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            color: #d6d4ff;
+            }
+
+            .destacada-card {
+            max-width: 600px;
+            margin: auto;
+            background-color: #2c2e4a;
+            padding: 2.5rem;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            }
+
+            .destacada-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            }
+
+            .destacada-card p {
+            color: #d1d1eb;
+            }
+            /* =========================
+            HISTORIA DESTACADA (IMAGEN)
+            ========================= */
+
+            .destacada-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            }
+
+            .destacada-card {
+            max-width: 520px;
+            margin: auto;
+            background-color: #2c2e4a;
+            border-radius: 22px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .destacada-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+            }
+
+            /* CONTENEDOR DE LA IMAGEN */
+
+            .destacada-imagen {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            }
+
+            /* IMAGEN */
+
+            .destacada-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+            }
+
+            /* EFECTO HOVER EN IMAGEN */
+
+            .destacada-card:hover .destacada-imagen img {
+            transform: scale(1.08);
+            }
+
+            /* TEXTO */
+
+            .destacada-card h3 {
+            margin: 1.5rem 1.5rem 0.8rem;
+            font-size: 1.6rem;
+            color: #ffffff;
+            }
+
+            .destacada-card p {
+            margin: 0 1.8rem 2rem;
+            font-size: 1.05rem;
+            color: #d1d1eb;
+            }
+
+
+            /* =========================
+            HISTORIA DESTACADA – DECORACIÓN PRO
+            ========================= */
+
+            .historia-destacada {
+            position: relative;
+            overflow: hidden;
+            }
+
+            /* LUCES */
+
+            .luz {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.6;
+            pointer-events: none;
+            animation: flotar 3s ease-in-out infinite;
+            }
+
+            .luz-1 {
+            background: rgba(167, 139, 250, 0.6);
+            top: 10%;
+            left: -100px;
+            }
+
+            .luz-2 {
+            background: rgba(232, 121, 249, 0.55);
+            bottom: 20%;
+            right: -120px;
+            animation-delay: 2s;
+            }
+
+            .luz-3 {
+            background: rgba(96, 165, 250, 0.45);
+            top: 60%;
+            left: 40%;
+            animation-delay: 4s;
+            }
+
+            /* PARTÍCULAS */
+
+            .particulas {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+            background-size: 80px 80px;
+            opacity: 0.25;
+            animation: moverParticulas 40s linear infinite;
+            pointer-events: none;
+            }
+
+            /* ANIMACIONES */
+
+            @keyframes flotar {
+            0% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-30px) scale(1.1); }
+            100% { transform: translateY(0) scale(1); }
+            }
+
+            @keyframes moverParticulas {
+            from { background-position: 0 0; }
+            to { background-position: 400px 400px; }
+            }
+
+            /* HALO TARJETA */
+
+            .destacada-card {
+            position: relative;
+            z-index: 2;
+            }
+
+            .destacada-card::before {
+            content: "";
+            position: absolute;
+            inset: -20px;
+            border-radius: 30px;
+            background: linear-gradient(
+                120deg,
+                rgba(167, 139, 250, 0.5),
+                rgba(232, 121, 249, 0.4),
+                rgba(96, 165, 250, 0.4)
+            );
+            filter: blur(40px);
+            z-index: -1;
+            }
+
+
+            /* =========================
+            RESPONSIVE
+            ========================= */
+
+            @media (max-width: 768px) {
+            .bienvenida h1 {
+                font-size: 2.4rem;
+            }
+
+            .bienvenida p {
+                font-size: 1.05rem;
+            }
+
+            .bienvenida-botones {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            }
+            /* =========================
+            FRASE DEL DÍA
+            ========================= */
+
+            .frase-dia {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+            margin-bottom: 5rem;
+            }
+
+            .frase-texto,
+            .frase-autor {
+            background: linear-gradient(145deg, #2c2e4a, #242646);
+            border-radius: 22px;
+            padding: 2.2rem;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+            }
+
+            .frase-texto {
+            font-size: 1.6rem;
+            text-align: center;
+            color: #e6e6f0;
+            }
+
+            .frase-autor {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            color: #c9c7ff;
+            }
+            .titulo-frase {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            color: #d6d4ff;
+            }
+            /* =========================
+            IMAGEN FRASE DEL DÍA
+            ========================= */
+
+            .frase-imagen {
+            background: linear-gradient(145deg, #2c2e4a, #242646);
+            border-radius: 22px;
+            padding: 1rem;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+
+            .frase-imagen img {
+            width: 100%;
+            height: 100%;
+            max-height: 220px;
+            object-fit: cover;
+            border-radius: 16px;
+            }
+
+
+            /* =========================
+            COMPARTIR PENSAMIENTOS
+            ========================= */
+
+            .compartir {
+            background: linear-gradient(145deg, #2c2e4a, #242646);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 25px 55px rgba(0,0,0,0.45);
+            margin-bottom: 4rem;
+            }
+
+            .compartir h2 {
+            font-size: 2rem;
+            color: #d6d4ff;
+            margin-bottom: 2rem;
+            }
+
+            .compartir-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            }
+
+            /* FORMULARIO */
+
+            .form-pensamiento input,
+            .form-pensamiento textarea {
+            width: 100%;
+            background-color: #1e1e2f;
+            border: 2px solid #3b3d5c;
+            border-radius: 14px;
+            padding: 0.9rem 1rem;
+            color: #e6e6f0;
+            margin-bottom: 1rem;
+            }
+
+            .form-pensamiento textarea {
+            min-height: 130px;
+            resize: none;
+            }
+
+            .form-pensamiento button {
+            background: linear-gradient(135deg, #a78bfa, #e879f9);
+            color: #1e1e2f;
+            border: none;
+            border-radius: 14px;
+            padding: 0.7rem 1.6rem;
+            font-weight: 700;
+            cursor: pointer;
+            float: right;
+            box-shadow: 0 10px 25px rgba(232, 121, 249, 0.35);
+            }
+
+            .form-pensamiento button:hover {
+            transform: translateY(-2px);
+            }
+
+            /* TARJETA DE PENSAMIENTO */
+
+            .pensamiento-card {
+            background-color: #1e1e2f;
+            border-radius: 22px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: inset 0 0 0 2px #3b3d5c;
+            }
+
+            .pensamiento-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #a78bfa;
+            margin-bottom: 1rem;
+            }
+
+            .pensamiento-card p {
+            font-size: 0.95rem;
+            color: #cbd5f5;
+            }
+
+            /* NOTA */
+
+            .compartir-nota {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #bdbdd8;
+            font-style: italic;
+            }
+
+            /* =========================
+            GRACIAS POR VISITARNOS
+            ========================= */
+
+            .gracias {
+            background: linear-gradient(145deg, #242646, #1e1e2f);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 25px 55px rgba(0,0,0,0.5);
+            text-align: center;
+            }
+
+            .gracias h2 {
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+            color: #c9c7ff;
+            }
+
+            .gracias p {
+            font-size: 1.05rem;
+            color: #d1d1eb;
+            margin-bottom: 2rem;
+            }
+
+            .gracias textarea {
+            width: 100%;
+            max-width: 600px;
+            min-height: 120px;
+            background-color: #1e1e2f;
+            border: 2px solid #3b3d5c;
+            border-radius: 16px;
+            padding: 1rem;
+            color: #e6e6f0;
+            resize: none;
+            }
+
+            .gracias button {
+            margin-top: 1.5rem;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            padding: 0.7rem 2rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(59,130,246,0.4);
+            }
+            /* =========================
+            decoracion parte final
+            ========================= */
+            /* =========================
+            PARTÍCULAS
+            ========================= */
+
+            .gracias::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+            background-size: 90px 90px;
+            opacity: 0.18;
+            pointer-events: none;
+            }
+            .frase-final {
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: #bdbdd8;
+            font-style: italic;
+            opacity: 0.85;
+            }
+            /* =========================
+            LUCES
+            ========================= */
+
+            .luz-final {
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            filter: blur(70px);
+            opacity: 0.45;
+            pointer-events: none;
+            }
+
+            .luz-f-1 {
+            background: rgba(167, 139, 250, 0.6);
+            top: -80px;
+            left: -80px;
+            }
+
+            .luz-f-2 {
+            background: rgba(232, 121, 249, 0.5);
+            bottom: -80px;
+            right: -80px;
+}
+
+
+            /* =========================
+            RESPONSIVE
+            ========================= */
+
+            @media (max-width: 900px) {
+            .frase-dia,
+            .compartir-grid {
+                grid-template-columns: 1fr;
+            }
+            }
