@@ -86,7 +86,7 @@
             display: flex;
             gap: 15px;
             }
-
+            
             .btn {
             border: none;
             padding: 12px 20px;
@@ -95,10 +95,14 @@
             cursor: pointer;
             text-decoration: none;
             }
-
+            
             .rosa {
             background-color: #d946ef;
             color: white;
+            }
+            .azul {
+                background-color: #6366f1;
+                color: white;
             }
 
             /* =========================
@@ -171,4 +175,14 @@
             .contenido-historia {
                 max-width: 100%;
             }
+            }
+            body {
+                opacity: 0;
+                animation: fadeIn 0.6s ease forwards;
+            }
+
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                }
             }
