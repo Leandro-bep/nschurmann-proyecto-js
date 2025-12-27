@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <style>
+
 /* =========================
         RESET GENERAL
 ========================= */
@@ -346,128 +351,180 @@ body {
   overflow-y: auto;
   padding-right: 6px;
 }
-        
-
-/* OVERLAY */
-#reglas-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(6px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-/* MODAL */
-.reglas-modal {
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: #e5e7eb;
-  width: 600px;
-  max-width: 90%;
-  padding: 35px 40px;
-  border-radius: 22px;
-  position: relative;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
-}
-
-/* TÍTULO */
-.reglas-modal h2 {
-  text-align: center;
-  color: #d946ef;
-  margin-bottom: 20px;
-}
-
-/* LISTA */
-.reglas-modal ul {
-  list-style: disc;
-  padding-left: 25px;
-  line-height: 1.8;
-}
-
-/* BOTÓN X (SIN CUADRADO) */
-#cerrar-reglas {
-  position: absolute;
-  top: 16px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 26px;
-  color: #fff;
-  cursor: pointer;
-}
-
-#cerrar-reglas:hover {
-  color: #d946ef;
-}
-
-/* FOOTER */
-.reglas-footer {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* CHECKBOX */
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.checkbox-container input {
-  display: none;
-}
-
-.custom-checkbox {
-  width: 22px;
-  height: 22px;
-  border: 2px solid #a78bfa;
-  border-radius: 6px;
-  position: relative;
-
-  /* 🔥 CENTRADO PERFECTO */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-/* ESTADO MARCADO */
-.checkbox-container input:checked + .custom-checkbox {
-  background-color: #a78bfa;   /* fondo al marcar */
-  border-color: #a78bfa;
-}
-
-/* X CENTRADA */
-.checkbox-container input:checked + .custom-checkbox::after {
-  content: "✕";
-  font-size: 16px;
-  font-weight: bold;
-  color: #020617; /* contraste con el fondo */
-  line-height: 1;
-}
 
 
-/* BOTÓN HECHO */
-#btn-hecho {
-  background-color: #7c3aed;
-  color: white;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 12px;
-  cursor: pointer;
-  opacity: 0.5;
-}
 
-#btn-hecho:enabled {
-  opacity: 1;
-}
+    </style>
+  </head>
 
-#btn-hecho:hover:enabled {
-  background-color: #6d28d9;
-}
+  <body>
+    <div class="page">
+
+  <aside class="sidebar">
+    <a href="/" class="btn-home">Volver al inicio</a>
+    <div class="sidebar-group">
+  <h3>Filtros</h3>
+
+  <!-- GENERO -->
+  <div class="filter-accordion">
+    <button class="filter-header">
+      Género
+      <span class="arrow">▾</span>
+    </button>
+
+    <div class="filter-content">
+      <button class="filter-option">Romance</button>
+      <button class="filter-option">Acción</button>
+      <button class="filter-option">Terror</button>
+    </div>
+  </div>
+
+  <!-- FECHA -->
+  <div class="filter-accordion">
+    <button class="filter-header">
+      Por fecha
+      <span class="arrow">▾</span>
+    </button>
+
+    <div class="filter-content">
+      <button class="filter-option">Más reciente</button>
+      <button class="filter-option">Más antigua</button>
+    </div>
+  </div>
+
+  <!-- TAG -->
+  <div class="filter-accordion">
+    <button class="filter-header">
+      Tag
+      <span class="arrow">▾</span>
+    </button>
+
+    <div class="filter-content">
+      <button class="filter-option">Popular</button>
+      <button class="filter-option">Nuevo</button>
+      <button class="filter-option">Tendencia</button>
+    </div>
+  </div>
+
+</div>
+<div class="sidebar-group">
+  <h3>Mi biblioteca</h3>
+  <button class="library-btn">Mis Favoritos</button>
+  <button class="library-btn">Leer más tarde</button>
+</div>
+
+  </aside>
+
+  <main class="content">
+    <h1>TODAS LAS HISTORIAS</h1>
+    <p class="subtitle">Explora todas las historias de nuestra biblioteca</p>
+
+      <div class="cards-container">
+        <div class="historias-grid">
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          
+
+          
+
+        </div>
+      </div>
+    </main>
+
+    </div>
+
+    
+
+
+  
+  <script src="" defer></script>
+
+  </body>
+  </html>

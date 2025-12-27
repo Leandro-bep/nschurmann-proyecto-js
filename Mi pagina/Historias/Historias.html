@@ -1,118 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <link rel="stylesheet" href="../CSS/historias_pg_principal.css">
+  </head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historias</title>
-    <link rel="stylesheet" href="../styles.css">
+<body>
+  <div class="page">
 
-</head>
+  <aside class="sidebar">
+    <a href="/" class="btn-home">Volver al inicio</a>
+    <div class="sidebar-group">
+  <h3>Filtros</h3>
 
-<script>
-  function mostrarTexto() {
-    const texto = document.getElementById("mensaje");
+  <!-- GENERO -->
+  <div class="filter-accordion">
+    <button class="filter-header">
+      Género
+      <span class="arrow">▾</span>
+    </button>
 
-    if (texto.style.display === "none") {
-      texto.style.display = "block";
-    } else {
-      texto.style.display = "none";
-    }
-  }
-</script>
-
-<body class="fondo-oscuro"> 
-  
-<section class="centrado">
-  <div class="botones">
-    <a href="../index.html" class="btn rosa"> <--Pagina principal</a>
+    <div class="filter-content">
+      <button class="filter-option">Romance</button>
+      <button class="filter-option">Acción</button>
+      <button class="filter-option">Terror</button>
+    </div>
   </div>
-  <h1>Todas las historias</h1>
-  <p class="descripcion">
-    Explora todas las historias que hay en nuestra biblioteca.
-  </p>
-  <hr class="linea-degradada">
-</section>
 
+  <!-- FECHA -->
+  <div class="filter-accordion">
+    <button class="filter-header">
+      Por fecha
+      <span class="arrow">▾</span>
+    </button>
 
-<section class="historias">
-  <div class="historias-grid">
-    
-    <a href="Un_Dia_normal/index.html" class="story-card">
-      <div class="story-img">
-        <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
-        <span class="tag">Romance</span>
-      </div>
-      <div class="story-body">
-        <h3>Un dia Normal</h3>
-        <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
-      </div>
-    </a>
-
-    <a href="Todavia_estoy_aqui/index.html" class="story-card">
-      <div class="story-img">
-        <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
-        <span class="tag">Reflectiva</span>
-      </div>
-      <div class="story-body">
-        <h3>Todavía Estoy Aquí</h3>
-        <p>La vida aveces te pone en situaciones donde te hace reflexionar sobre todo lo que hiciste.</p>
-      </div>
-    </a>
-
-    <a href="Si_Hubiera_Pasado/index.html" class="story-card">
-      <div class="story-img">
-        <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
-        <span class="tag">Fantasia</span>
-      </div>
-      <div class="story-body">
-        <h3>Si Hubiera Pasado</h3>
-        <p>Nuestras decisiones aveces nos puede jugar en contra. Hasta que te das cuenta.</p>
-      </div>
-    </a>
-
-    <a href="Todavia_Recuerdo_ese_Dia/index.html" class="story-card">
-      <div class="story-img">
-        <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
-        <span class="tag">Romance</span>
-      </div>
-      <div class="story-body">
-        <h3>Todavia Recuerdo ese Día</h3>
-        <p>El amor llega cuando menos te lo esperas. Y cuando llega todo cambia.</p>
-      </div>
-    </a>
-
-    <a href="Cuando_Nadie_Mira/index.html" class="story-card">
-      <div class="story-img">
-        <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
-        <span class="tag">Reflectiva</span>
-      </div>
-      <div class="story-body">
-        <h3>Cuando Nadie Mira</h3>
-        <p>Aveces somos diferentes cuando nadie nos mira, y en ese momento sacamos a nuetro verdadero ser.</p>
-      </div>
-    </a>
-
-    <!-- repites -->
-    
+    <div class="filter-content">
+      <button class="filter-option">Más reciente</button>
+      <button class="filter-option">Más antigua</button>
+    </div>
   </div>
-</section>
 
-<!-- MODAL REGLAS -->
-<div id="reglas-overlay">
+  <!-- TAG -->
+  <div class="filter-accordion">
+    <button class="filter-header">
+      Tag
+      <span class="arrow">▾</span>
+    </button>
+
+    <div class="filter-content">
+      <button class="filter-option">Popular</button>
+      <button class="filter-option">Nuevo</button>
+      <button class="filter-option">Tendencia</button>
+    </div>
+  </div>
+
+</div>
+<div class="sidebar-group">
+  <h3>Mi biblioteca</h3>
+  <button class="library-btn">Mis Favoritos</button>
+  <button class="library-btn">Leer más tarde</button>
+</div>
+  </aside>
+
+  <main class="content">
+    <h1>TODAS LAS HISTORIAS</h1>
+    <p class="subtitle">Explora todas las historias de nuestra biblioteca</p>
+
+      <div class="cards-container">
+        <div class="historias-grid">
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+          <a href="" class="story-card">
+            <div class="story-img">
+              <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
+              <span class="tag">Romace</span>
+            </div>
+            <div class="story-body">
+              <h3>Un dia Normal</h3>
+              <p>Cuando encontras a alguien importante. Sientes que debes protegerlo a toda costa.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </main>
+
+<!-- MODAL DE REGLAS -->
+ <div id="reglas-overlay">
   <div class="reglas-modal">
 
-    <!-- Botón cerrar -->
-    <button id="cerrar-reglas" aria-label="Cerrar">×</button>
+    <button id="cerrar-reglas">✕</button>
 
-    <h2>Reglas de la página</h2>
+    <h2>Reglas de uso</h2>
 
     <ul>
-      <li>Respeto en los comentarios.</li>
-      <li>Las historias son anónimas.</li>
-      <li>No se permiten insultos.</li>
-      <li>Este espacio es para compartir emociones.</li>
+      <li>No contenido ofensivo</li>
+      <li>Respeta a otros usuarios</li>
+      <li>No spam</li>
     </ul>
 
     <div class="reglas-footer">
@@ -127,7 +186,9 @@
 
   </div>
 </div>
+    
 
-<script src="../JavaScrip.css/reglas.js"></script>
+  <script src="../JavaScrip.css/filtro.js" defer></script>
+  <script src="../JavaScrip.css/reglas.js" defer></script>
 </body>
 </html>
