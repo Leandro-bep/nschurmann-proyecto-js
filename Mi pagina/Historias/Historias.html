@@ -20,9 +20,9 @@
     </button>
 
     <div class="filter-content">
-      <button class="filter-option">Romance</button>
-      <button class="filter-option">Acción</button>
-      <button class="filter-option">Terror</button>
+      <button class="filter-option" data-type="genero" data-value="romance">Romance</button>
+      <button class="filter-option" data-type="genero" data-value="fantasia">Fantasia</button>
+      <button class="filter-option" data-type="genero" data-value="reflectiva">Reflectiva</button>
     </div>
   </div>
 
@@ -34,8 +34,8 @@
     </button>
 
     <div class="filter-content">
-      <button class="filter-option">Más reciente</button>
-      <button class="filter-option">Más antigua</button>
+      <button class="filter-option" data-type="fecha" data-value="reciente">Más reciente</button>
+      <button class="filter-option" data-type="fecha" data-value="antigua">Más antigua</button>
     </div>
   </div>
 
@@ -47,9 +47,9 @@
     </button>
 
     <div class="filter-content">
-      <button class="filter-option">Popular</button>
-      <button class="filter-option">Nuevo</button>
-      <button class="filter-option">Tendencia</button>
+      <button class="filter-option" data-type="tag" data-value="popular">Popular</button>
+      <button class="filter-option" data-type="tag" data-value="nuevo">Nuevo</button>
+      <button class="filter-option" data-type="tag" data-value="tendencia">Tendencia</button>
     </div>
   </div>
 
@@ -65,10 +65,25 @@
     <h1>TODAS LAS HISTORIAS</h1>
     <p class="subtitle">Explora todas las historias de nuestra biblioteca</p>
 
+      <div class="filters-bar">
+        <span id="resultsCount">Mostrar todas las historias</span>
+
+        <div id="activeFilters" class="active-filters"></div>
+
+        <button id="clearFilters" class="clear-filters">
+          Borrar filtros ✕
+        </button>
+      </div>
       <div class="cards-container">
+        <div class="results-info" id="resultsCount">
+          Mostrando todas las historias
+        </div>
+        <div class="active-filters" id="activeFilters"></div>
+
         <div class="historias-grid">
 
-        <a href="../Historias/Un_Dia_normal/index.html" class="story-card">
+        <a href="../Historias/Un_Dia_normal/index.html" class="story-card" data-genero="romance" data-fecha="antigua"
+           data-tag="popular">
           <div class="story-img">
             <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
             <span class="tag">Romace</span>
@@ -79,7 +94,8 @@
           </div>
         </a>
 
-        <a href="Todavia_estoy_aqui/index.html" class="story-card">
+        <a href="Todavia_estoy_aqui/index.html" class="story-card" data-genero="reflectiva" data-fecha="antigua"
+           data-tag="popular">
           <div class="story-img">
             <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
             <span class="tag">Reflectiva</span>
@@ -90,7 +106,8 @@
           </div>
         </a>
 
-        <a href="Si_Hubiera_Pasado/index.html" class="story-card">
+        <a href="Si_Hubiera_Pasado/index.html" class="story-card" data-genero="fantasia" data-fecha="antigua"
+           data-tag="popular">
           <div class="story-img">
             <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
             <span class="tag">Fantasia</span>
@@ -101,7 +118,8 @@
           </div>
         </a>
 
-        <a href="Todavia_Recuerdo_ese_Dia/index.html" class="story-card">
+        <a href="Todavia_Recuerdo_ese_Dia/index.html" class="story-card" data-genero="romance" data-fecha="antigua"
+           data-tag="popular">
           <div class="story-img">
             <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
             <span class="tag">Romance</span>
@@ -112,7 +130,8 @@
           </div>
         </a>
 
-        <a href="Cuando_Nadie_Mira/index.html" class="story-card">
+        <a href="Cuando_Nadie_Mira/index.html" class="story-card" data-genero="reflectiva" data-fecha="antigua"
+           data-tag="popular">
           <div class="story-img">
             <img src="https://i.pinimg.com/736x/05/95/14/05951473a4b86dd19b5e4ae6246f4e63.jpg">
             <span class="tag">Reflectiva</span>
@@ -186,7 +205,7 @@
 
   </div>
 </div>
-    
+
 
   <script src="../JavaScrip.css/filtro.js" defer></script>
   <script src="../JavaScrip.css/reglas.js" defer></script>
