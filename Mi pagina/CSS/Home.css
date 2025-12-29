@@ -26,7 +26,7 @@
             .container {
             max-width: 1100px;
             margin: auto;
-            padding: 4rem 2rem;
+            padding: 2rem;
             }
 
             /* =========================
@@ -668,6 +668,102 @@
             color: #bdbdd8;
             font-style: italic;
             }
+            /* ===================================
+            DECORACIÓN – COMPARTIR TU PENSAMIENTO
+            =================================== */
+
+            /* Entrada suave de sección */
+            .compartir {
+                position: relative;
+                animation: aparecerPensamiento 1.4s ease-out both;
+            }
+
+            @keyframes aparecerPensamiento {
+                from {
+                    opacity: 0;
+                    transform: translateY(35px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Luz emocional de fondo */
+            .compartir::before {
+                content: "";
+                position: absolute;
+                inset: -60px;
+                background: radial-gradient(circle at top left,
+                    rgba(167, 139, 250, 0.15),
+                    transparent 65%);
+                z-index: -1;
+            }
+
+            /* Textura suave */
+            .compartir::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+                opacity: 0.04;
+                pointer-events: none;
+            }
+
+            /* =====================
+            INPUTS – RESPUESTA
+            ===================== */
+
+            .form-pensamiento input:focus,
+            .form-pensamiento textarea:focus {
+                outline: none;
+                border-color: #a78bfa;
+                box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.25);
+                transition: all 0.25s ease;
+            }
+
+            /* =====================
+            BOTÓN – VIDA
+            ===================== */
+
+            .form-pensamiento button {
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+
+            .form-pensamiento button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 15px 35px rgba(232, 121, 249, 0.45);
+            }
+
+            .form-pensamiento button:active {
+                transform: scale(0.96);
+            }
+
+            /* MICRO-TEXTO DEL FORMULARIO */
+            .form-pensamiento textarea::placeholder {
+                color: #9ca3af;
+                font-style: italic;
+                opacity: 0.7;
+            }
+
+            /* Cuando el usuario empieza a escribir */
+            .form-pensamiento textarea:focus::placeholder {
+                opacity: 0.4;
+            }
+
+            /* =====================
+            TARJETA PENSAMIENTO
+            ===================== */
+
+            .pensamiento-card {
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
+            }
+
+            .pensamiento-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+            }
+
 
             /* =========================
             GRACIAS POR VISITARNOS
@@ -777,13 +873,1077 @@
                 grid-template-columns: 1fr;
             }
             }
-body {
-    opacity: 0;
-    animation: fadeIn 0.6s ease forwards;
+
+
+/* ===================================
+   DECORACIONES – ENCABEZADO / HERO
+=================================== */
+
+/* Entrada suave del hero */
+.hero {
+    animation: fadeHero 1.2s ease-out both;
 }
 
-@keyframes fadeIn {
+@keyframes fadeHero {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* Título con presencia */
+.hero h1 {
+    position: relative;
+    animation: slideTitle 1.4s ease-out both;
+}
+
+@keyframes slideTitle {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Subrayado decorativo del título */
+.hero h1::after {
+    content: "";
+    display: block;
+    width: 240px;
+    height: 3px;
+    background: linear-gradient(90deg, #a78bfa, #6366f1);
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* Texto de bienvenida */
+.hero p {
+    animation: fadeText 1.6s ease-out both;
+}
+
+@keyframes fadeText {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botones con micro-interacción */
+.bienvenida-botones a {
+    transition: all 0.3s ease;
+}
+
+.bienvenida-botones a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.25);
+}
+
+/* Imagen con suavidad */
+.hero-imagen img {
+    animation: imgFloat 2s ease-out both;
+    border-radius: 18px;
+}
+
+@keyframes imgFloat {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Sombra suave */
+.hero-imagen img {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===================================
+   POR QUÉ SE CREÓ LA PÁGINA – FINAL
+=================================== */
+
+.porque-pagina {
+    max-width: 850px;
+    margin: 80px auto;
+    padding: 50px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(6px);
+    border-radius: 26px;
+
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeSection 1.2s ease-out forwards;
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Entrada suave */
+@keyframes fadeSection {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover elegante */
+.porque-pagina:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+}
+
+/* Título */
+.porque-pagina h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Línea decorativa */
+.porque-pagina h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    margin: 14px auto 0;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #a78bfa,
+        transparent
+    );
+    border-radius: 10px;
+}
+
+/* Texto */
+.porque-pagina p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #cbd5f5;
+}
+
+/* Halo sutil */
+.porque-pagina::before {
+    content: "";
+    position: absolute;
+    inset: -40px;
+    background: radial-gradient(
+        circle at top center,
+        rgba(167, 139, 250, 0.14),
+        transparent 65%
+    );
+    filter: blur(40px);
+    z-index: 0;
+}
+
+/* Asegura contenido arriba */
+.porque-pagina * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ===================================
+   HISTORIA DESTACADA – BASE
+=================================== */
+
+.historia-destacada {
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Título de sección */
+.historia-destacada h2 {
+    font-size: 2.4rem;
+    margin-bottom: 60px;
+    color: #e5e7ff;
+    position: relative;
+    display: inline-block;
+}
+
+.historia-destacada h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 14px auto 0;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #a78bfa,
+        transparent
+    );
+    border-radius: 10px;
+}
+
+/* ===================================
+   TARJETA DESTACADA – CONTENEDOR
+=================================== */
+
+.destacada-card {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+
+    background: linear-gradient(
+        135deg,
+        rgba(99, 102, 241, 0.08),
+        rgba(167, 139, 250, 0.08)
+    );
+
+    backdrop-filter: blur(10px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+
+    cursor: pointer;
+
+    /* Entrada narrativa */
+    opacity: 0;
+    transform: scale(0.96) translateY(20px);
+    animation: entradaDestacada 1.2s ease-out forwards;
+
+    /* Respiración lenta */
+    animation: entradaDestacada 1.2s ease-out forwards,
+               respiracion 8s ease-in-out infinite;
+}
+
+/* Entrada */
+@keyframes entradaDestacada {
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Respiración */
+@keyframes respiracion {
+    0%, 100% {
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    }
+    50% {
+        box-shadow: 0 40px 95px rgba(99, 102, 241, 0.25);
+    }
+}
+
+/* ===================================
+   BRILLO QUE SIGUE EL MOUSE (PREPARADO)
+=================================== */
+
+.destacada-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        350px circle at var(--x, 50%) var(--y, 50%),
+        rgba(167, 139, 250, 0.18),
+        transparent 65%
+    );
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.destacada-card:hover::before {
+    opacity: 1;
+}
+
+/* ===================================
+   IMAGEN DESTACADA
+=================================== */
+
+.destacada-imagen {
+    position: relative;
+    overflow: hidden;
+}
+
+.destacada-imagen img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+/* Oscurecido narrativo */
+.destacada-imagen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 40%,
+        rgba(20, 20, 35, 0.85)
+    );
+    opacity: 0.7;
+    transition: opacity 0.4s ease;
+}
+
+.destacada-card:hover .destacada-imagen img {
+    transform: scale(1.06);
+}
+
+.destacada-card:hover .destacada-imagen::after {
+    opacity: 1;
+}
+
+/* ===================================
+   CONTENIDO DE TEXTO
+=================================== */
+
+.destacada-contenido {
+    padding: 50px 55px;
+    color: #e5e7ff;
+}
+
+.destacada-contenido h3 {
+    font-size: 1.9rem;
+    margin-bottom: 18px;
+    transition: transform 0.4s ease;
+}
+
+.destacada-contenido p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #cbd5f5;
+    transition: transform 0.4s ease;
+}
+
+/* Micro-movimiento */
+.destacada-card:hover h3 {
+    transform: translateY(-4px);
+}
+
+.destacada-card:hover p {
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   INDICADOR DE ACCIÓN
+=================================== */
+
+.destacada-card::after {
+    content: "Leer historia →";
+    display: block;
+    margin-bottom: 28px;
+    font-size: 0.9rem;
+    color: #c9c7ff;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.destacada-card:hover::after {
+    opacity: 1;
+}
+
+/* ===================================
+   FONDOS POR HISTORIA (FUTURO)
+=================================== */
+
+/* Romance */
+.destacada-card.romance {
+    background: linear-gradient(
+        135deg,
+        rgba(236, 72, 153, 0.12),
+        rgba(167, 139, 250, 0.12)
+    );
+}
+
+/* Melancólica */
+.destacada-card.melancolia {
+    background: linear-gradient(
+        135deg,
+        rgba(56, 189, 248, 0.10),
+        rgba(30, 64, 175, 0.15)
+    );
+}
+
+/* Oscura */
+.destacada-card.oscura {
+    background: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.8),
+        rgba(30, 27, 75, 0.9)
+    );
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 768px) {
+    .destacada-imagen img {
+        height: 280px;
+    }
+
+    .destacada-contenido {
+        padding: 35px 28px;
+    }
+
+    .destacada-contenido h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ===================================
+   HISTORIAS SEMANALES – PULIDO VISUAL
+=================================== */
+
+.historia-semanal {
+    padding: 3.5rem 2rem 4.5rem;
+    background: linear-gradient(
+        to bottom,
+        rgba(38, 40, 68, 0.6),
+        rgba(30, 30, 47, 0.9)
+    );
+    position: relative;
+}
+
+/* TÍTULO */
+
+.historia-semanal h2 {
+    text-align: center;
+    font-size: 2.1rem;
+    color: #d6d4ff;
+    margin-bottom: 3rem;
+    position: relative;
+    animation: fadeUp 1.2s ease both;
+}
+
+.historia-semanal h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 14px auto 0;
+    background: linear-gradient(90deg, #a78bfa, #e879f9);
+    border-radius: 10px;
+}
+
+/* GRID – más aire visual */
+
+.historia-semanal .historias-grid {
+    max-width: 1100px;
+    margin: auto;
+    gap: 28px;
+}
+
+/* TARJETAS – más calmadas que la destacada */
+
+.historia-semanal .story-card {
+    background: linear-gradient(145deg, #2b2f42, #24263a);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+/* Hover sutil */
+
+.historia-semanal .story-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+    filter: brightness(1.05);
+}
+
+/* TEXTO */
+
+.historia-semanal .story-body h3 {
+    color: #c9c7ff;
+}
+
+.historia-semanal .story-body p {
+    color: #bfc3f5;
+    line-height: 1.4;
+}
+
+/* TAG – más suave */
+
+.historia-semanal .tag {
+    background: linear-gradient(135deg, #a78bfa, #6366f1);
+    box-shadow: 0 4px 12px rgba(167,139,250,0.4);
+}
+
+/* ANIMACIÓN DE ENTRADA DE TARJETAS */
+
+.historia-semanal .story-card {
+    animation: fadeCard 0.9s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeCard {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   SECCIÓN HISTORIAS SEMANALES
+========================= */
+
+.historia-semanal {
+    padding: 80px 40px;
+}
+
+.historia-semanal h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+/* =========================
+        GRID DE HISTORIAS
+========================= */
+
+.historias-grid {
+    display: grid;
+
+    /* 🔥 SIEMPRE 5 TARJETAS POR FILA */
+    grid-template-columns: repeat(5, 1fr);
+
+    justify-content: center;
+    justify-items: center;
+    gap: 24px;
+}
+
+/* =========================
+            CARD
+========================= */
+
+.story-card {
+    width: 100%;
+    max-width: 220px;
+
+    background: #2b2f42;
+    border-radius: 22px;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+}
+
+/* =========================
+            IMAGEN
+========================= */
+
+.story-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.story-img img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ✨ BRILLO SUAVE EN LA IMAGEN */
+
+.story-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.18),
+        transparent
+    );
+
+    opacity: 0;
+    transform: translateX(-60%);
+    transition: opacity 0.4s ease, transform 0.6s ease;
+    pointer-events: none;
+}
+
+.story-card:hover .story-img::after {
+    opacity: 1;
+    transform: translateX(60%);
+}
+
+/* =========================
+              TAG
+========================= */
+
+.tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    background: #d946ef;
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.7rem;
+
+    border-radius: 999px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* =========================
+           CONTENIDO
+========================= */
+
+.story-body {
+    padding: 16px;
+}
+
+.story-body h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.story-body p {
+    font-size: 0.85rem;
+    color: #cbd5f5;
+}
+
+/* =========================
+        NOTA INFERIOR
+========================= */
+
+.nota-historias {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #cbd5f5;
+    opacity: 0.9;
+}
+
+
+/* =========================
+   FRASE DE LA SEMANA
+========================= */
+
+.titulo-frase {
+    text-align: center;
+    font-size: 2.1rem;
+    margin-bottom: 50px;
+    letter-spacing: 0.5px;
+}
+
+/* CONTENEDOR GENERAL */
+
+.frase-dia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 70px 80px;
+
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(8px);
+    border-radius: 32px;
+
+    position: relative;
+    overflow: hidden;
+
+    animation: fraseEntrada 1.6s ease-out both;
+}
+
+/* ENTRADA SUAVE */
+
+@keyframes fraseEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* COMILLAS DECORATIVAS */
+
+.frase-dia::before,
+.frase-dia::after {
+    content: "“";
+    position: absolute;
+    font-size: 120px;
+    color: rgba(255,255,255,0.05);
+    font-family: serif;
+}
+
+.frase-dia::before {
+    top: 10px;
+    left: 30px;
+}
+
+.frase-dia::after {
+    content: "”";
+    bottom: -10px;
+    right: 30px;
+}
+
+/* TEXTO */
+
+.frase-texto {
+    max-width: 520px;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #f1f5ff;
+    position: relative;
+
+    animation: respirarTexto 6s ease-in-out infinite;
+}
+
+/* RESPIRACIÓN DEL TEXTO */
+
+@keyframes respirarTexto {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+/* PALABRA DESTACADA */
+
+.frase-texto span {
+    color: #a78bfa;
+    position: relative;
+}
+
+.frase-texto span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #a78bfa, #6366f1);
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+/* IMAGEN */
+
+.frase-imagen {
+    width: 260px;
+    flex-shrink: 0;
+
+    animation: flotar 7s ease-in-out infinite;
+}
+
+.frase-imagen img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+}
+
+/* FLOTACIÓN SUAVE */
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* LUZ SUAVE DE FONDO */
+
+.frase-dia::after {
+    content: "";
+    position: absolute;
+    inset: -50px;
+    background: radial-gradient(circle at center,
+        rgba(167,139,250,0.12),
+        transparent 70%);
+    z-index: -1;
+}
+
+
+.frase-dia:hover .frase-texto {
+    color: #ffffff;
+}
+
+.frase-dia:hover .frase-texto span::after {
+    opacity: 1;
+    height: 4px;
+}
+
+.frase-texto::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin-top: 25px;
+
+    background: linear-gradient(90deg, #a78bfa, #6366f1);
+    border-radius: 10px;
+
+    animation: pulsoLinea 3.5s ease-in-out infinite;
+}
+
+@keyframes pulsoLinea {
+    0%, 100% {
+        opacity: 0.4;
+        width: 60px;
+    }
+    50% {
+        opacity: 1;
+        width: 90px;
+    }
+}
+
+.frase-dia::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* BOTÓN – ESTADO NORMAL */
+.form-pensamiento button {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* CLICK */
+.form-pensamiento button:active {
+    transform: scale(0.95);
+}
+
+/* EFECTO ONDA SUAVE */
+.form-pensamiento button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-pensamiento button:active::after {
+    opacity: 1;
+}
+
+/* FEEDBACK AL ENVIAR */
+.envio-feedback {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #c9c7ff;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+/* Mostrar al hacer click */
+.form-pensamiento button:focus + .envio-feedback {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* FINAL – SECCIÓN GRACIAS */
+.gracias {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    animation: aparecerFinal 1.4s ease both;
+}
+
+@keyframes aparecerFinal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* LUZ AMBIENTE FINAL */
+.gracias::before {
+    content: "";
+    position: absolute;
+    inset: -60px;
+    background: radial-gradient(
+        circle at top,
+        rgba(167, 139, 250, 0.18),
+        transparent 70%
+    );
+    z-index: -1;
+}
+
+/* TEXTAREA FINAL */
+.gracias textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gracias textarea:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167,139,250,0.25);
+}
+
+/* BOTÓN FINAL */
+.gracias button {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gracias button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(59,130,246,0.45);
+}
+
+.gracias button:active {
+    transform: scale(0.95);
+}
+
+/* FRASE DE DESPEDIDA */
+.frase-final {
+    animation: flotarFinal 6s ease-in-out infinite;
+}
+
+@keyframes flotarFinal {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* DESVANECIMIENTO FINAL */
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #1e1e2f
+    );
+    pointer-events: none;
+}
+
+
+/* =========================
+   ANIMACIONES POR SCROLL
+========================= */
+
+/* estado oculto inicial */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+/* cuando entra en pantalla */
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.linea-decorativa {
+    position: relative;
+}
+
+.linea-decorativa::after {
+    content: "";
+    position: absolute;
+    inset: -30px;
+    background: radial-gradient(
+        circle,
+        rgba(167,139,250,0.08),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+section {
+    scroll-margin-top: 80px;
+}
+section {
+    position: relative;
+    padding-top: 1px; /* truco anti colapso */
+}
+body {
+    animation: respiracion 20s ease-in-out infinite;
+}
+
+@keyframes respiracion {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.015); }
+    100% { filter: brightness(1); }
+}
+
+/* Fallback de seguridad */
+.no-js .scroll-reveal {
+    opacity: 1;
+    transform: none;
+}
+
+/* Animaciones al hacer scroll */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
