@@ -703,3 +703,169 @@ body {
   color: #fff;
 }
 
+/* =====================================================
+   MEJORAS VISUALES – SECCIÓN HISTORIAS
+   (NO ROMPE TU CÓDIGO ACTUAL)
+===================================================== */
+
+/* =========================
+   1️⃣ CARD – efecto glass + profundidad
+   Sirve para: que las historias se vean premium
+========================= */
+.story-card {
+  background: linear-gradient(
+    180deg,
+    rgba(43,47,66,0.95),
+    rgba(30,32,55,0.95)
+  );
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* =========================
+   2️⃣ CARD HOVER – glow suave
+   Sirve para: dar sensación de historia importante
+========================= */
+.story-card:hover {
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.4),
+    0 0 0 1px rgba(167,139,250,0.25),
+    0 0 35px rgba(167,139,250,0.15);
+}
+
+/* =========================
+   3️⃣ IMAGEN – degradado inferior
+   Sirve para: mejorar legibilidad del texto
+========================= */
+.story-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.55)
+  );
+}
+
+/* =========================
+   4️⃣ IMAGEN – zoom suave al hover
+   Sirve para: dar vida a la tarjeta
+========================= */
+.story-card:hover .story-img img {
+  transform: scale(1.07);
+}
+
+/* =========================
+   5️⃣ TÍTULO – más personalidad
+   Sirve para: que el título destaque sin romper diseño
+========================= */
+.story-body h3 {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.story-card:hover .story-body h3 {
+  color: #d946ef;
+}
+
+/* =========================
+   6️⃣ DESCRIPCIÓN – mejor lectura
+   Sirve para: que el texto se sienta más cómodo
+========================= */
+.story-body p {
+  line-height: 1.4;
+}
+
+/* =========================
+   7️⃣ ANIMACIÓN DE ENTRADA
+   Sirve para: efecto elegante al cargar / filtrar
+========================= */
+.story-card.show {
+  animation: cardEnter 0.45s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================
+   8️⃣ CONTENEDOR HISTORIAS
+   Sirve para: dar aire visual y orden
+========================= */
+.historias {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* =========================
+   9️⃣ NOTA INFERIOR
+   Sirve para: toque elegante y suave
+========================= */
+.nota-historias {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+
+
+
+.filter-accordion.open::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 99px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #a78bfa,
+    transparent
+  );
+}
+.filter-option {
+  transition: background .2s ease, transform .15s ease;
+}
+
+.filter-option:hover {
+  transform: translateX(4px);
+}
+.filter-option.active {
+  animation: pulseFilter .3s ease;
+}
+
+@keyframes pulseFilter {
+  0% { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
+
+.story-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(167,139,250,0.5),
+    transparent
+  );
+  opacity: 0;
+  pointer-events: none;
+}
+
+.story-card:hover::before {
+  opacity: 1;
+}
+
