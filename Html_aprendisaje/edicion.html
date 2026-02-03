@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <style>
+/* =====================================================
+   VARIABLES GLOBALES
+===================================================== */
+:root {
+    --bg-main: #1e1e2f;
+    --bg-secondary: #26263b;
+    --bg-card: #2f2f4a;
+
+    --text-main: #f1f1f7;
+    --text-secondary: #b5b5d6;
+
+    --accent: #8b8bff;
+    --accent-soft: rgba(139, 139, 255, 0.15);
+
+    --radius: 14px;
+    --radius-soft: 10px;
+
+    --shadow-soft: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* =====================================================
+   RESET BÁSICO
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* =====================================================
+   HEADER / LUGAR DE LECTURA
+===================================================== */
+.header-lectura {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background-color: var(--bg-secondary);
+    padding: 18px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* BOTONES HEADER */
+.header-lectura button,
+.header-lectura a {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: none;
+
+    padding: 8px 14px;
+    border-radius: var(--radius-soft);
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: background 0.25s, transform 0.2s;
+}
+
+.header-lectura button:hover,
+.header-lectura a:hover {
+    background-color: var(--accent-soft);
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   CONTENEDOR GENERAL
+===================================================== */
+.layout-lectura {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* =====================================================
+   CONTENEDOR CENTRAL DE LECTURA
+===================================================== */
+.contenido-lectura {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   BLOQUE TÍTULO
+===================================================== */
+.bloque-titulo {
+    margin-bottom: 25px;
+}
+
+.bloque-titulo h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.bloque-titulo .autor {
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+/* =====================================================
+   TAGS / ETIQUETAS
+===================================================== */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    background-color: var(--bg-card);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+}
+
+/* =====================================================
+   ZONA DE LECTURA
+===================================================== */
+.zona-lectura {
+    background-color: var(--bg-secondary);
+    padding: 40px;
+
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+}
+
+.zona-lectura p {
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    color: var(--text-main);
+}
+
+.separador {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--text-secondary);
+}
+
+/* =====================================================
+   SECCIÓN DE COMENTARIOS (CORREGIDA)
+===================================================== */
+.seccion-comentarios {
+    margin-top: 50px;
+
+    background-color: var(--bg-secondary);
+    padding: 32px;
+
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+
+    width: 100%;
+}
+
+/* TÍTULO COMENTARIOS */
+.seccion-comentarios h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+/* LISTA */
+.lista-comentarios {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+/* COMENTARIO */
+.comentario-item {
+    background-color: var(--bg-card);
+    padding: 16px;
+    border-radius: var(--radius-soft);
+}
+
+.comentario-item .usuario {
+    font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.comentario-item .texto {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* FORM COMENTAR */
+.comentario-form textarea {
+    width: 100%;
+    background-color: var(--bg-main);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding: 12px;
+    border-radius: var(--radius-soft);
+    color: var(--text-main);
+    resize: none;
+    font-size: 14px;
+}
+
+.comentario-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.comentario-form button {
+    margin-top: 12px;
+
+    background-color: var(--accent);
+    color: #1e1e2f;
+
+    border: none;
+    padding: 10px 18px;
+    border-radius: var(--radius-soft);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.comentario-form button:hover {
+    opacity: 0.9;
+}
+
+/* =====================================================
+   HISTORIAS RECOMENDADAS
+===================================================== */
+.recomendados {
+    margin-top: 60px;
+}
+
+.recomendados h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.recomendados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.recomendado-card {
+    background-color: var(--bg-secondary);
+    padding: 18px;
+
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+
+    transition: transform 0.25s;
+}
+
+.recomendado-card:hover {
+    transform: translateY(-5px);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+    .zona-lectura {
+        padding: 28px;
+    }
+
+    .bloque-titulo h1 {
+        font-size: 28px;
+    }
+}
+
+        </style>
+    </head>
+
+    <body>
+
+        <header class="header-lectura">
+            <h2>Lugar de lectura</h2>
+            
+            <button>
+                <a href="../Mi pagina/Historias/Historias.html">Volver atras</a>
+            </button>
+
+            <button>
+                <a href="">Volver al Inicio</a>
+            </button>
+        </header>
+
+        <main class="layout-lectura">
+            <section>
+                <div class="bloque-titulo">
+                    <h1>Un Dia Normal</h1>
+                    <div class="autor">Contada por:</div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Romance</span>
+                    <span class="tag">Romance</span>
+                    <span class="tag">Romance</span>
+                </div>
+
+                <article class="zona-lectura">
+                        <p>
+                            Nunca pensé que mi vida se definiría por momentos tan pequeños. No por grandes
+                            logros ni por decisiones épicas, sino por instantes silenciosos, de esos que nadie
+                            más ve y que, aun así, terminan pesando más que cualquier aplauso.
+                        </p>
+
+                        <p>
+                            Desde hace años aprendí a seguir adelante sin hacer ruido. A cumplir con lo esperado,
+                            a responder cuando me llamaban, a estar cuando hacía falta. Desde fuera parecía que
+                            todo iba bien, y tal vez era cierto. Pero por dentro, muchas veces sentí que estaba
+                            viviendo en automático, como si alguien más hubiera decidido el ritmo por mí.
+                        </p>
+
+                        <div class="separador">✦ ✦ ✦</div>
+
+                        <p>
+                            Hubo días en los que quise detenerme y preguntarme si esto era suficiente. Si así se
+                            suponía que debía sentirse crecer. Pero siempre había algo que lo postergaba:
+                            responsabilidades, personas, miedo. Me convencí de que ya habría tiempo para mí después.
+                        </p>
+
+                        <p>
+                            Ese “después” nunca llegó.
+                        </p>
+
+                        <div class="separador">✦ ✦ ✦</div>
+
+                        <p>
+                            Con el paso del tiempo empecé a notar pequeños desgastes. El cansancio que no se iba
+                            durmiendo, la sonrisa que aparecía por costumbre, la sensación de estar cumpliendo una
+                            lista que no recordaba haber escrito. No era tristeza, era algo más silencioso. Una
+                            ausencia difícil de explicar.
+                        </p>
+
+                        <p>
+                            Una noche común, sin nada especial, me quedé solo. No puse música, no busqué
+                            distracciones. Me senté y dejé que los pensamientos llegaran. Pensé en todo lo que
+                            callé, en las decisiones que tomé por inercia, en las veces que dije “está bien” cuando
+                            en realidad no lo estaba.
+                        </p>
+
+                        <p>
+                            No lloré.<br>
+                            No hubo drama.
+                        </p>
+
+                        <p>
+                            Solo una certeza incómoda: si seguía así, nadie iba a venir a rescatarme de esta versión
+                            de mí.
+                        </p>
+
+                        <div class="separador">✦ ✦ ✦</div>
+
+                        <p>
+                            Al día siguiente, el mundo siguió igual. La gente, las rutinas, los problemas.
+                            Nada había cambiado… excepto yo. Empecé con cosas pequeñas. Decir no cuando era
+                            necesario. Escuchar mi cansancio. Elegirme sin sentir culpa por hacerlo.
+                        </p>
+
+                        <p>
+                            No fue fácil. Cambiar duele, incluso cuando es para bien. Hubo dudas, retrocesos,
+                            momentos en los que quise volver a lo conocido. Pero cada vez que lo intentaba,
+                            recordaba esa noche y la promesa silenciosa que me hice.
+                        </p>
+
+                        <div class="separador">✦ ✦ ✦</div>
+
+                        <p>
+                            Hoy no puedo decir que tenga todo claro. Sigo equivocándome, sigo aprendiendo.
+                            Pero ya no me ignoro. Ya no paso por mi propia vida como un espectador.
+                        </p>
+
+                        <p>
+                            Y aunque nadie lo note, aunque no haya aplausos ni reconocimientos, por primera vez
+                            siento que estoy viviendo de verdad.
+                        </p>
+                </article>
+
+                <section class="recomendados">
+                    <h2>Historias recomendadas</h2>
+                    
+                    <div class="recomendados-grid">
+                        <div class="recomendado-card">
+                            <h2>un dia normal</h2>
+                        </div>
+
+                        <div class="recomendado-card">
+                            <h2>un dia normal</h2>
+                        </div>
+
+                        <div class="recomendado-card">
+                            <h2>un dia normal</h2>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+
+            <section class="seccion-comentarios">
+                <h2>Comentarios</h2>
+
+                <div class="lista-comentarios">
+                    <div class="comentario-item">
+                        <div class="usuario">Usuario1</div>
+                        <div class="texto">
+                            Este capítulo me dejó pensando bastante.
+                        </div>
+                    </div>
+
+                    <div class="comentario-item">
+                        <div class="usuario">Usuario2</div>
+                        <div class="texto">
+                            Muy buena narración, se siente real.
+                        </div>
+                    </div>
+                </div>
+
+                <form class="comentario-form">
+                    <textarea rows="3" placeholder="Escribe tu comentario..."></textarea>
+                    <button type="submit">Comentar</button>
+                </form>
+            </section>
+        </main>
+
+    </body>
+</html>
