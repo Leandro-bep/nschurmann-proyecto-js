@@ -1,0 +1,174 @@
+/* =====================================================
+   RESET
+===================================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(180deg,#1e1e2f,#181825);
+    color:#e6e6f0;
+    min-height:100vh;
+}
+
+/* =====================================================
+   VARIABLES DE COLOR
+===================================================== */
+:root{
+    --bg-main:#1e1e2f;
+    --bg-panel:#2a2a40;
+    --bg-card:#32324d;
+    --border:#3b3b5c;
+
+    --text-main:#e6e6f0;
+    --text-soft:#b8b8d4;
+
+    --accent:#7aa2f7;
+    --accent-hover:#5d8df5;
+
+    --radius:14px;
+    --shadow:0 8px 25px rgba(0,0,0,0.35);
+}
+
+/* =====================================================
+   LAYOUT GENERAL
+===================================================== */
+.app{
+    display:flex;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+.sidebar{
+    width:260px;
+    min-height:100vh;
+    background:var(--bg-panel);
+    padding:24px;
+    border-right:1px solid var(--border);
+}
+
+.sidebar h3{
+    margin:25px 0 10px;
+    font-size:14px;
+    color:var(--text-soft);
+}
+
+.sidebar button{
+    width:100%;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:10px;
+    border:none;
+    cursor:pointer;
+    background:var(--bg-card);
+    color:var(--text-main);
+    text-align:left;
+    transition:.25s;
+}
+
+.sidebar button:hover{
+    background:var(--border);
+}
+
+/* =====================================================
+   CONTENIDO PRINCIPAL
+===================================================== */
+.main{
+    flex:1;
+    padding:40px;
+}
+
+/* =====================================================
+   GRID DE HISTORIAS
+===================================================== */
+.grid-historias{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    gap:25px;
+}
+
+/* =====================================================
+   CARD HISTORIA
+===================================================== */
+.card{
+    background:var(--bg-card);
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    transition:.25s;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:var(--accent);
+}
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:18px;
+}
+
+.card-title{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.card-desc{
+    font-size:14px;
+    color:var(--text-soft);
+}
+
+/* =====================================================
+   BOTON FAVORITO (CORAZON)
+===================================================== */
+.btn-fav{
+    position:absolute;
+    top:12px;
+    right:12px;
+    background:rgba(0,0,0,0.5);
+    border:none;
+    border-radius:50%;
+    width:36px;
+    height:36px;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+    transition:.25s;
+}
+
+.btn-fav:hover{
+    background:var(--accent);
+}
+
+.card-img-wrapper{
+    position:relative;
+}
+
+/* =====================================================
+   TITULO SECCION
+===================================================== */
+.titulo-seccion{
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+/* =====================================================
+   MENSAJE VACIO
+===================================================== */
+.vacio{
+    text-align:center;
+    padding:60px;
+    color:var(--text-soft);
+    font-size:18px;
+}

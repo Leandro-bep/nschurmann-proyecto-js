@@ -1,7 +1,5 @@
+ids = {1, 2,3}
+users =["ana", "juan", "pedro"]
 
-
-i = 1.0
-while i <= 10:
-    suma = suma + i
-    print("la suma actual es: ", suma)
-    i += 0.5
+for i, u in zip(ids, users):
+    print(f"{i}: {u}")
