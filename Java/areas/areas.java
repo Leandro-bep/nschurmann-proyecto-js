@@ -31,7 +31,7 @@ public class areas {
         System.out.println("Contraseña: " + contraseñas.get(0));
         System.out.println("ID: " + ids.get(0));
 
-        
+        sc.close();
     }   
     
 }
