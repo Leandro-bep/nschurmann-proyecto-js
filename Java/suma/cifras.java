@@ -6,11 +6,12 @@ public class cifras {
         System.out.print("ingrese un numero de 3 cifras: ");
         int numero = sc.nextInt();
 
-        int centenas = numero / 100;
+        int millar = numero / 1000; 
+        int centenas = (numero / 100) % 10;
         int decenas = (numero / 10) % 10;
         int unidades = numero % 10;
 
-        int suma = centenas + decenas + unidades;
+        int suma = millar + centenas + decenas + unidades;
 
         System.out.println("La suma de sus digitos es: " + suma);
 
