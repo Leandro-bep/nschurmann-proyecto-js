@@ -20,6 +20,6 @@ public class CalculoIGV {
         System.out.println("el monto total a pagar con credito es: " + total);
         System.out.println("el monto total que pagara es: " + credito);
 
-       
+       sc.close();
     }
 }

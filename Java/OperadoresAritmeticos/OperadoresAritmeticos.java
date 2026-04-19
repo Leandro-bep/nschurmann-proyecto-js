@@ -18,6 +18,6 @@ public class OperadoresAritmeticos {
         System.out.println("Área: " + area);
         System.out.println("Perímetro: " + perimetro);
 
-        
+        sc.close();
     }
 }

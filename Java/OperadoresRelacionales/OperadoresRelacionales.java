@@ -17,6 +17,8 @@ public class OperadoresRelacionales {
 
         System.out.println("¿El estudiante aprobó?: " + esAprobado);
         System.out.println("¿Es una nota excelente (18-20)?: " + esExcelente);
+
+        sc.close();
     }
 }
 

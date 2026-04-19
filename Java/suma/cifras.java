@@ -15,6 +15,7 @@ public class cifras {
 
         System.out.println("La suma de sus digitos es: " + suma);
 
+            sc.close();
     }
         
     

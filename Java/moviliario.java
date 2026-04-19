@@ -34,6 +34,7 @@ public class moviliario {
         else{
             System.out.println("Credito rechazado por edad");
         }
+        sc.close();
     }
 
     

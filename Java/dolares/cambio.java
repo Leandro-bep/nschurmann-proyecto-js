@@ -14,6 +14,7 @@ public class cambio {
         double resultado = soles / dolares;
         System.out.println("El valor en soles es: " + resultado);
 
+        sc.close();
     }
 
     
